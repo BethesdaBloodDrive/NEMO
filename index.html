@@ -14,6 +14,7 @@
   <header class="site-header" id="top" role="banner">
     <nav class="navbar container" aria-label="Primary">
       <div class="brand">
+        <!-- ✅ You can change the text "NEMO" if the org name changes -->
         <a href="#top" class="logo" aria-label="NEMO Home">NEMO</a>
       </div>
 
@@ -24,6 +25,9 @@
         <span class="nav-toggle-bar"></span>
       </button>
 
+      <!-- ✅ Edit <a> text to rename nav links
+           ✅ Update href="#..." to change where the link points
+           ✅ Add/remove <li> to add or delete a navigation item -->
       <ul class="nav-links" id="primaryNav" role="menubar">
         <li role="none"><a role="menuitem" href="#about">About Us</a></li>
         <li role="none"><a role="menuitem" href="#mission">Our Mission</a></li>
@@ -39,50 +43,57 @@
     <!-- News / Updates Banner -->
     <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
       <div class="news-marquee container">
+        <!-- ✅ Edit text inside <p>
+             ✅ Replace href="#" with actual registration/event link -->
         <p>
           <strong>🚨 Update:</strong> Applications due • Sept 30 @ 6:00 PM (placeholder)•
           <a href="#" class="banner-link">Register here →</a>
         </p>
       </div>
     </div>
-
-    
   </header>
-<!-- Hero -->
-    <section class="hero container" id="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Northwestern Emergency Medical Organization</h1>
-          <p class="slogan">[Insert slogan]</p>
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#contact">Join Us</a>
-            <a class="btn btn-outline" href="#about">Learn More</a>
-          </div>
-        </div>
-        <div class="hero-art">
-          <!-- Fish mascot placeholder -->
-          <figure class="mascot-wrap" aria-label="NEMO mascot">
-            <img src="images/mascot.png" alt="NEMO fish mascot placeholder" class="mascot mascot--hero" />
-            <figcaption >Nathan the Fish</figcaption>
-			  <!-- class="visually-hidden"-->
-          </figure>
+
+  <!-- Hero -->
+  <section class="hero container" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <!-- ✅ Edit main heading and slogan text -->
+        <h1>Northwestern Emergency Medical Organization</h1>
+        <p class="slogan">[Insert slogan]</p>
+        <div class="hero-ctas">
+          <!-- ✅ Change button text or href to update call-to-actions -->
+          <a class="btn btn-primary" href="#contact">Join Us</a>
+          <a class="btn btn-outline" href="#about">Learn More</a>
         </div>
       </div>
-    </section>
+      <div class="hero-art">
+        <!-- Fish mascot placeholder -->
+        <!-- ✅ Replace image src with new mascot graphic -->
+        <figure class="mascot-wrap" aria-label="NEMO mascot">
+          <img src="images/mascot.png" alt="NEMO fish mascot placeholder" class="mascot mascot--hero" />
+          <!-- ✅ Change caption text -->
+          <figcaption>Nathan the Fish</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <main id="main">
     <!-- About Us -->
     <section id="about" class="section about">
       <div class="container">
         <div class="section-head">
+          <!-- ✅ Safe to edit heading and subtitle -->
           <h2>About Us</h2>
           <p class="section-subtitle">Who we are, what we do, and why it matters.</p>
         </div>
         <div class="about-grid">
+          <!-- ✅ Replace placeholder text with real description -->
           <p>
-            (Placeholder) NEMO is a student-run organization dedicated to building emergency readiness across the Northwestern community through hands-on training,
-            outreach events, and leadership opportunities. We create pathways for students to gain real skills, serve the community, and grow together.
+            (Placeholder) NEMO is a student-run organization dedicated to building emergency readiness...
           </p>
           <ul class="about-points">
+            <!-- ✅ Add/remove <li> to update list items -->
             <li>(Placeholder) Hands-on CPR/AED and First Aid workshops</li>
             <li>(Placeholder) Campus and community outreach</li>
             <li>(Placeholder) Leadership development &amp; peer mentorship</li>
@@ -96,9 +107,12 @@
       <div class="container">
         <div class="section-head">
           <h2>Our Mission</h2>
+          <!-- ✅ Update slogan text -->
           <p class="section-subtitle">(Placeholder) Train. Serve. Lead.</p>
         </div>
         <div class="pillars">
+          <!-- ✅ Edit <h3> and <p> text inside each pillar
+               ✅ Add/remove <article class="pillar"> to change number of pillars -->
           <article class="pillar">
             <h3>Training</h3>
             <p>(Placeholder) Deliver high-quality, practical skills that save lives.</p>
@@ -125,6 +139,8 @@
           <p class="section-subtitle">(Placeholder) What we’ve achieved together.</p>
         </div>
         <div class="stats">
+          <!-- ✅ Edit numbers and labels
+               ✅ Add/remove entire <div class="stat"> to update stats -->
           <div class="stat">
             <div class="stat-number">200+</div>
             <div class="stat-label">Students trained</div>
@@ -149,6 +165,9 @@
           <p class="section-subtitle">What’s happening next.</p>
         </div>
         <div class="event-grid">
+          <!-- ✅ Each <article class="event-card"> is one event.
+               ✅ Edit <h3>, <p>, and button link/text.
+               ✅ Add/remove <article class="event-card"> to update events list -->
           <article class="event-card">
             <h3>(Placeholder) CPR/AED Workshop</h3>
             <p>Date: Sept 30 • 6:00 PM</p>
@@ -169,6 +188,7 @@
           </article>
         </div>
         <div class="section-cta">
+          <!-- ✅ Update link or button text -->
           <a href="#" class="btn btn-outline">View Full Calendar</a>
         </div>
       </div>
@@ -182,6 +202,9 @@
           <p class="section-subtitle">Training, service, and leadership tracks.</p>
         </div>
         <div class="cards">
+          <!-- ✅ Each <article class="card"> is a training type.
+               ✅ Edit <h3> and <p> text.
+               ✅ Add/remove <article class="card"> to expand/shrink list -->
           <article class="card">
             <h3>Training Sessions</h3>
             <p>Hands-on CPR/AED and First Aid skill-building led by peers.</p>
@@ -206,6 +229,8 @@
           <p class="section-subtitle">Training, outreach, and campus life.</p>
         </div>
 
+        <!-- ✅ Replace <img> src and alt text with new photos
+             ✅ Add/remove <figure class="slide"> to change carousel images -->
         <div class="carousel" data-autoplay="true" data-interval="5000" aria-roledescription="carousel">
           <div class="carousel-track" aria-live="off">
             <figure class="slide is-active">
@@ -222,9 +247,11 @@
             </figure>
           </div>
 
+          <!-- ✅ Navigation buttons (safe to leave as is) -->
           <button class="carousel-btn prev" aria-label="Previous slide" data-action="prev">‹</button>
           <button class="carousel-btn next" aria-label="Next slide" data-action="next">›</button>
 
+          <!-- ✅ Carousel dots: auto-linked to slides above -->
           <div class="carousel-dots" role="tablist" aria-label="Choose slide">
             <button class="dot is-active" role="tab" aria-selected="true" aria-controls="slide-1" data-slide="0">
               <span class="visually-hidden">Slide 1</span>
@@ -248,6 +275,9 @@
           <p class="section-subtitle">Leaders, instructors, and organizers.</p>
         </div>
         <div class="team-grid">
+          <!-- ✅ Each <article class="team-card"> is a team member.
+               ✅ Replace <img src>, <h3>, <p class="role">, and <p class="bio">.
+               ✅ Add/remove <article class="team-card"> to add or delete members -->
           <article class="team-card">
             <img src="images/mascot.png" alt="Team member headshot" />
             <h3>Nathan the Mascot</h3>
@@ -284,6 +314,8 @@
           <p class="section-subtitle">Real experiences from our community.</p>
         </div>
         <div class="quotes">
+          <!-- ✅ Edit or replace each <blockquote>.
+               ✅ Add/remove <blockquote> to update testimonials -->
           <blockquote class="quote">
             “Joining NEMO gave me real EMS experience and a great group of friends.”
             <cite>— Riley, Class of 2027</cite>
@@ -304,6 +336,10 @@
           <p class="section-subtitle">Explore partners, guides, and socials.</p>
         </div>
         <div class="link-grid">
+          <!-- ✅ Each <a class="link-card"> is a resource card.
+               ✅ Replace href with actual URL.
+               ✅ Change <h3> and <p> text.
+               ✅ Add/remove <a class="link-card"> to update resources -->
           <a class="link-card" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
             <h3>Instagram</h3>
             <p>Follow our journey and events.</p>
@@ -333,6 +369,10 @@
         </div>
 
         <!-- Accordion structure (functionality via homepage.js) -->
+        <!-- ✅ Each <article class="accordion-item"> is one FAQ.
+             ✅ Change button text for the question.
+             ✅ Replace <p> text with the answer.
+             ✅ Add/remove <article class="accordion-item"> to update FAQ list -->
         <div class="accordion" role="tablist">
           <article class="accordion-item">
             <h3>
@@ -341,7 +381,7 @@
               </button>
             </h3>
             <div id="faq1" class="accordion-panel" role="region" aria-labelledby="faq1-btn" hidden>
-              <p>(Placeholder) Fill out our application form, then attend an intro meeting or training to get plugged in.</p>
+                           <p>(Placeholder) Fill out our application form, then attend an intro meeting or training to get plugged in.</p>
             </div>
           </article>
 
@@ -385,9 +425,14 @@
     <section id="contact" class="section contact">
       <div class="container">
         <div class="section-head">
+          <!-- ✅ Edit heading/subtitle text -->
           <h2>Contact Us</h2>
           <p class="section-subtitle">Questions, ideas, or partnerships—say hello!</p>
         </div>
+
+        <!-- ✅ Contact form: 
+             - You can edit label text and placeholder text.
+             - Keep 'id' and 'name' attributes the same (they connect form fields). -->
         <form class="contact-form" action="#" method="post" novalidate>
           <div class="form-row">
             <label for="name">Name</label>
@@ -404,6 +449,7 @@
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
 
+        <!-- ✅ Update links or add new ones to change contact/social options -->
         <div class="contact-socials">
           <a href="https://www.instagram.com/nemo.northwestern?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="#" target="_blank" rel="noopener noreferrer">Cats on Campus</a>
@@ -417,11 +463,14 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-brand">
+        <!-- ✅ Replace mascot img or footer logo text -->
         <img src="assets/mascot-placeholder.png" alt="" class="mascot mascot--footer" aria-hidden="true" />
         <span class="footer-logo">NEMO</span>
+        <!-- ✅ The <span id="year"> auto-updates via JS -->
         <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
       </div>
 
+      <!-- ✅ Add/remove footer links inside <li> -->
       <nav class="footer-nav" aria-label="Footer">
         <ul>
           <li><a href="#top">Home</a></li>
@@ -432,6 +481,7 @@
         </ul>
       </nav>
 
+      <!-- ✅ You can change button text and href -->
       <div class="footer-actions">
         <a class="btn btn-outline btn-sm" href="#contact">Join / Contact</a>
       </div>
@@ -439,10 +489,14 @@
   </footer>
 
   <!-- Decorative floating mascot sprinkles -->
+  <!-- ✅ Replace mascot images or delete if you don’t want floating graphics -->
   <img src="images/mascot.placeholder" class="mascot mascot--float-1" alt="" aria-hidden="true" />
   <img src="images/mascot.placeholder" class="mascot mascot--float-2" alt="" aria-hidden="true" />
 
   <!-- JS -->
+  <!-- ✅ Keep this linked so navbar, FAQ accordion, and carousel work -->
   <script src="homepage.js" defer></script>
 </body>
 </html>
+
+
