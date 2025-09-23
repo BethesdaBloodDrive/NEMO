@@ -1,0 +1,241 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f0f4f7, #d9e7f5);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #4CAF50, #2E7D32);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c3e6cb;
+}
+
+/* Search Bar */
+#search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#deck-search {
+    width: 60%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid #4CAF50;
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+#deck-search:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+/* Deck List */
+.deck-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    justify-content: center;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deck {
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.deck h3 {
+    font-size: 1.5rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.deck button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 1rem;
+}
+
+.deck button:hover {
+    background: #388E3C;
+}
+
+.deck:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #d32f2f;
+}
+
+.flashcard {
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    height: 200px;
+}
+
+.flashcard .card-content {
+    display: none;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.flashcard .front {
+    display: block;
+}
+
+.flashcard.flipped .front {
+    display: none;
+}
+
+.flashcard.flipped .back {
+    display: block;
+}
+
+/* Card Controls */
+.card-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card-controls button {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card-controls button:hover {
+    background: #388E3C;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #2E7D32;
+
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .deck-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .deck-list {
+        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
+    }
+}

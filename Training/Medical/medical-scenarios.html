@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Scenarios</title>
+    <link rel="stylesheet" href="medical-scenarios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Medical Scenarios</h1>
+        <p>Explore medical scenarios, BLS care, and interactive quizzes to enhance your training!</p>
+    </header>
+
+    <main>
+        <!-- Abuse/Neglect -->
+        <div class="scenario">
+            <button class="scenario-header">Abuse/Neglect</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Injuries suggestive of intentional harm (e.g., burns in patterns, various stages of healing).</li>
+                    <li>Malnutrition or extreme lack of cleanliness.</li>
+                    <li>Bulging fontanels or altered mental status in infants.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Stabilize and treat injuries.</li>
+                    <li>Discourage patient from washing if sexual abuse is suspected.</li>
+                    <li>Document:
+                        <ul>
+                            <li>Statements made by patient/caregiver.</li>
+                            <li>Abnormal behavior from patient/caregiver.</li>
+                            <li>Environmental conditions.</li>
+                            <li>Time law enforcement or social services were notified.</li>
+                        </ul>
+                    </li>
+                    <li>Report suspected abuse to appropriate authorities (law enforcement or social services).</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>Which of the following is a key indication of abuse or neglect?</p>
+                    <button data-answer="correct">Burns in unusual patterns</button>
+                    <button data-answer="wrong">Flu-like symptoms</button>
+                    <button data-answer="wrong">Sudden weight gain</button>
+                    <button data-answer="wrong">Chronic fatigue</button>
+                </div>
+                <div class="quiz">
+                    <p>What should you do if sexual abuse is suspected?</p>
+                    <button data-answer="correct">Treat injuries but discourage washing</button>
+                    <button data-answer="wrong">Allow the patient to wash before transport</button>
+                    <button data-answer="wrong">Ignore environmental factors</button>
+                    <button data-answer="wrong">Notify authorities in front of the caregiver</button>
+                </div>
+                <div class="quiz">
+                    <p>What must be documented in suspected abuse cases?</p>
+                    <button data-answer="correct">Both B and C</button>
+                    <button data-answer="wrong">Dietary preferences</button>
+                    <button data-answer="wrong">Statements from the caregiver</button>
+                    <button data-answer="wrong">Time of law enforcement notification</button>
+                </div>
+                <div class="quiz">
+                    <p>Who should you notify in suspected abuse cases?</p>
+                    <button data-answer="correct">Local police or social services</button>
+                    <button data-answer="wrong">Hospital staff</button>
+                    <button data-answer="wrong">The patient’s employer</button>
+                    <button data-answer="wrong">Family members</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Agitation -->
+        <div class="scenario">
+            <button class="scenario-header">Agitation (Adult & Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Mild Agitation: Agitated but cooperative.</li>
+                    <li>Moderate Agitation: Irrational behavior that poses risk to self or others.</li>
+                    <li>Severe Agitation: Physically violent.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Maintain scene safety and call law enforcement if necessary.</li>
+                    <li>Use verbal de-escalation and emotional support (e.g., SAFER Model):
+                        <ul>
+                            <li>Stabilize the situation.</li>
+                            <li>Assess the crisis.</li>
+                            <li>Facilitate resources (e.g., family, police).</li>
+                            <li>Encourage action for their best interest.</li>
+                            <li>Recovery/referral to professional care.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>Which symptom characterizes severe agitation?</p>
+                    <button data-answer="correct">Physical violence</button>
+                    <button data-answer="wrong">Mild irritability</button>
+                    <button data-answer="wrong">Cooperative behavior</button>
+                    <button data-answer="wrong">Nervousness</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the first priority in cases of agitation?</p>
+                    <button data-answer="correct">Ensure scene safety</button>
+                    <button data-answer="wrong">Call for ALS support</button>
+                    <button data-answer="wrong">Apply physical restraints</button>
+                    <button data-answer="wrong">Provide sedatives</button>
+                </div>
+                <div class="quiz">
+                    <p>The SAFER Model includes:</p>
+                    <button data-answer="correct">Stabilizing the situation</button>
+                    <button data-answer="wrong">Administering sedatives</button>
+                    <button data-answer="wrong">Evaluating vitals</button>
+                    <button data-answer="wrong">Physically restraining the patient</button>
+                </div>
+                <div class="quiz">
+                    <p>What should you do if verbal de-escalation is unsuccessful?</p>
+                    <button data-answer="correct">Contact law enforcement if necessary</button>
+                    <button data-answer="wrong">Apply physical restraints immediately</button>
+                    <button data-answer="wrong">Ignore the patient’s behavior</button>
+                    <button data-answer="wrong">Administer medications</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Allergic Reaction (Adult) -->
+        <div class="scenario">
+            <button class="scenario-header">Allergic Reaction (Adult)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Mild Symptoms: Localized swelling and itching.</li>
+                    <li>Moderate Symptoms: Hives or mild wheezing.</li>
+                    <li>Severe Symptoms: Acute swelling of mucosa, respiratory compromise, hypotension.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>For mild or moderate symptoms:
+                        <ul>
+                            <li>Administer epinephrine auto-injector (0.3 mg IM) in the lateral thigh.</li>
+                            <li>If wheezing/bronchospasm: Use albuterol inhaler (2 puffs) or nebulized albuterol. Repeat once within 30 minutes if needed.</li>
+                        </ul>
+                    </li>
+                    <li>For mild symptoms with known life-threatening history:
+                        <ul>
+                            <li>Epinephrine auto-injector (0.3 mg IM) in lateral thigh.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is the appropriate dose of an epinephrine auto-injector for adults?</p>
+                    <button data-answer="correct">0.3 mg</button>
+                    <button data-answer="wrong">0.15 mg</button>
+                    <button data-answer="wrong">0.5 mg</button>
+                    <button data-answer="wrong">1.0 mg</button>
+                </div>
+                <div class="quiz">
+                    <p>What should be administered for wheezing during an allergic reaction?</p>
+                    <button data-answer="correct">Albuterol inhaler or nebulizer</button>
+                    <button data-answer="wrong">Diphenhydramine</button>
+                    <button data-answer="wrong">Aspirin</button>
+                    <button data-answer="wrong">Oral glucose</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the first step for a mild allergic reaction?</p>
+                    <button data-answer="correct">Administer an epinephrine auto-injector</button>
+                    <button data-answer="wrong">Call for ALS support</button>
+                    <button data-answer="wrong">Provide oral glucose</button>
+                    <button data-answer="wrong">Transport immediately</button>
+                </div>
+                <div class="quiz">
+                    <p>When should you repeat an albuterol treatment?</p>
+                    <button data-answer="correct">After 30 minutes if symptoms persist</button>
+                    <button data-answer="wrong">Immediately after the first dose</button>
+                    <button data-answer="wrong">Only if ALS arrives</button>
+                    <button data-answer="wrong">Never repeat a dose</button>
+                </div>
+            </div>
+        </div>
+		
+		        <!-- Allergic Reaction (Pediatric) -->
+        <div class="scenario">
+            <button class="scenario-header">Allergic Reaction (Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Mild Symptoms: Localized swelling and itching.</li>
+                    <li>Moderate Symptoms: Hives or mild wheezing.</li>
+                    <li>Severe Symptoms: Acute swelling of mucosa, respiratory compromise, hypotension.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>For mild or moderate symptoms:
+                        <ul>
+                            <li>Epinephrine (BLS) IM injection:
+                                <ul>
+                                    <li>&lt;5 years old: 0.15 mg.</li>
+                                    <li>≥5 years old: 0.3 mg.</li>
+                                </ul>
+                            </li>
+                            <li>Albuterol:
+                                <ul>
+                                    <li>&lt;2 years old: 1.25 mg nebulized.</li>
+                                    <li>≥2 years old: 2.5 mg nebulized.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is the epinephrine dose for a child under 5 years old?</p>
+                    <button data-answer="correct">0.15 mg</button>
+                    <button data-answer="wrong">0.3 mg</button>
+                    <button data-answer="wrong">0.5 mg</button>
+                    <button data-answer="wrong">1.0 mg</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the correct nebulized albuterol dose for children under 2 years old?</p>
+                    <button data-answer="correct">1.25 mg</button>
+                    <button data-answer="wrong">2.5 mg</button>
+                    <button data-answer="wrong">0.5 mg</button>
+                    <button data-answer="wrong">1.0 mg</button>
+                </div>
+                <div class="quiz">
+                    <p>What symptoms indicate a moderate allergic reaction in children?</p>
+                    <button data-answer="correct">Hives or mild wheezing</button>
+                    <button data-answer="wrong">Mild swelling</button>
+                    <button data-answer="wrong">GI symptoms</button>
+                    <button data-answer="wrong">Severe respiratory distress</button>
+                </div>
+                <div class="quiz">
+                    <p>What should you do if a child develops wheezing after allergen exposure?</p>
+                    <button data-answer="correct">Provide albuterol nebulizer treatment</button>
+                    <button data-answer="wrong">Administer an antihistamine</button>
+                    <button data-answer="wrong">Check blood glucose</button>
+                    <button data-answer="wrong">Apply a cold compress</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anaphylaxis -->
+        <div class="scenario">
+            <button class="scenario-header">Anaphylaxis (Adult & Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Acute severe illness after allergen exposure with:
+                        <ul>
+                            <li>Urticaria (hives) or mucosal swelling.</li>
+                            <li>Respiratory compromise or hypotension.</li>
+                            <li>GI symptoms (e.g., abdominal pain, diarrhea).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Administer epinephrine auto-injector:
+                        <ul>
+                            <li>Adult: 0.3 mg IM lateral thigh.</li>
+                            <li>Pediatric: 0.15 mg IM (&lt;5 years); 0.3 mg IM (≥5 years).</li>
+                        </ul>
+                    </li>
+                    <li>Repeat every 5 minutes (up to 3 doses) for persistent symptoms.</li>
+                    <li>Use albuterol (BLS) nebulized for bronchospasm.</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>How many doses of epinephrine can be administered in severe anaphylaxis?</p>
+                    <button data-answer="correct">Up to three</button>
+                    <button data-answer="wrong">Two</button>
+                    <button data-answer="wrong">Unlimited</button>
+                    <button data-answer="wrong">One</button>
+                </div>
+                <div class="quiz">
+                    <p>What is a hallmark symptom of anaphylaxis?</p>
+                    <button data-answer="correct">Respiratory compromise</button>
+                    <button data-answer="wrong">Mild swelling</button>
+                    <button data-answer="wrong">Localized itching</button>
+                    <button data-answer="wrong">Slow heart rate</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the pediatric epinephrine dose for children 5 years or older?</p>
+                    <button data-answer="correct">0.3 mg</button>
+                    <button data-answer="wrong">0.15 mg</button>
+                    <button data-answer="wrong">0.1 mg</button>
+                    <button data-answer="wrong">0.5 mg</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the preferred site for epinephrine administration?</p>
+                    <button data-answer="correct">Lateral thigh</button>
+                    <button data-answer="wrong">Deltoid muscle</button>
+                    <button data-answer="wrong">Abdomen</button>
+                    <button data-answer="wrong">Upper back</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hypoglycemia/Hyperglycemia (Adult) -->
+        <div class="scenario">
+            <button class="scenario-header">Hypoglycemia/Hyperglycemia (Adult)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Blood glucose less than 70 mg/dL or greater than 300 mg/dL.</li>
+                    <li>Altered mental status, suspected diabetes, or unresponsiveness.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Check blood glucose.</li>
+                    <li>If blood glucose &lt; 70 mg/dL:
+                        <ul>
+                            <li>Administer oral glucose (10-15 grams) between gum and cheek.</li>
+                            <li>Repeat dose if no improvement after 10 minutes.</li>
+                        </ul>
+                    </li>
+                    <li>If blood glucose > 300 mg/dL:
+                        <ul>
+                            <li>Provide supportive care and transport.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is the recommended treatment for blood glucose &lt;70 mg/dL?</p>
+                    <button data-answer="correct">Provide 10-15 grams of oral glucose</button>
+                    <button data-answer="wrong">Administer epinephrine</button>
+                    <button data-answer="wrong">Transport immediately</button>
+                    <button data-answer="wrong">Administer IV fluids</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the appropriate response if hyperglycemia (&gt;300 mg/dL) is detected?</p>
+                    <button data-answer="correct">Provide supportive care and transport</button>
+                    <button data-answer="wrong">Administer oral glucose</button>
+                    <button data-answer="wrong">Check for seizure activity</button>
+                    <button data-answer="wrong">Monitor blood pressure</button>
+                </div>
+                <div class="quiz">
+                    <p>How soon should oral glucose be repeated if the patient shows no improvement?</p>
+                    <button data-answer="correct">10 minutes</button>
+                    <button data-answer="wrong">5 minutes</button>
+                    <button data-answer="wrong">15 minutes</button>
+                    <button data-answer="wrong">20 minutes</button>
+                </div>
+                <div class="quiz">
+                    <p>What blood glucose level is considered hypoglycemia?</p>
+                    <button data-answer="correct">&lt;70 mg/dL</button>
+                    <button data-answer="wrong">&lt;90 mg/dL</button>
+                    <button data-answer="wrong">&lt;50 mg/dL</button>
+                    <button data-answer="wrong">&lt;30 mg/dL</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hypoglycemia/Hyperglycemia (Pediatric) -->
+        <div class="scenario">
+            <button class="scenario-header">Hypoglycemia/Hyperglycemia (Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Blood glucose less than 70 mg/dL or greater than 300 mg/dL.</li>
+                    <li>Altered mental status, suspected diabetes, or unresponsiveness.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Check blood glucose.</li>
+                    <li>If blood glucose &lt; 70 mg/dL:
+                        <ul>
+                            <li>Administer oral glucose (10-15 grams) between gum and cheek.</li>
+                            <li>Repeat dose if no improvement after 10 minutes.</li>
+                        </ul>
+                    </li>
+                    <li>For neonates (&lt;28 days): blood glucose &lt; 40 mg/dL requires immediate transport after care.</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What blood glucose level is considered critical for neonates (&lt;28 days)?</p>
+                    <button data-answer="correct">&lt;40 mg/dL</button>
+                    <button data-answer="wrong">&lt;50 mg/dL</button>
+                    <button data-answer="wrong">&lt;70 mg/dL</button>
+                    <button data-answer="wrong">&lt;80 mg/dL</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the initial treatment for a pediatric patient with blood glucose &lt;70 mg/dL?</p>
+                    <button data-answer="correct">Oral glucose (10-15 grams)</button>
+                    <button data-answer="wrong">IV dextrose</button>
+                    <button data-answer="wrong">Epinephrine</button>
+                    <button data-answer="wrong">Transport immediately</button>
+                </div>
+                <div class="quiz">
+                    <p>If a pediatric patient does not respond to initial oral glucose, what is the next step?</p>
+                    <button data-answer="correct">Repeat the oral glucose after 10 minutes</button>
+                    <button data-answer="wrong">Administer epinephrine</button>
+                    <button data-answer="wrong">Delay transport until stable</button>
+                    <button data-answer="wrong">Perform an EKG</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the priority for neonates with blood glucose &lt;40 mg/dL?</p>
+                    <button data-answer="correct">Immediate transport after care</button>
+                    <button data-answer="wrong">Monitor for seizure activity</button>
+                    <button data-answer="wrong">Administer fluids</button>
+                    <button data-answer="wrong">Repeat blood glucose check</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seizures (Adult) -->
+        <div class="scenario">
+            <button class="scenario-header">Seizures (Adult)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Active seizure or postictal state.</li>
+                    <li>Altered mental status or history of epilepsy.</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Protect the patient from injury.</li>
+                    <li>Do not restrain the patient or insert anything into the mouth.</li>
+                    <li>After the seizure stops:
+                        <ul>
+                            <li>Check blood glucose. If &lt;70 mg/dL, treat per hypoglycemia protocol.</li>
+                            <li>Monitor airway and breathing.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is the first action to take during an active seizure?</p>
+                    <button data-answer="correct">Protect the patient from injury</button>
+                    <button data-answer="wrong">Restrain the patient</button>
+                    <button data-answer="wrong">Place an object in the patient’s mouth</button>
+                    <button data-answer="wrong">Check blood glucose immediately</button>
+                </div>
+                <div class="quiz">
+                    <p>What should you do after the seizure stops?</p>
+                    <button data-answer="correct">Perform airway and breathing assessment</button>
+                    <button data-answer="wrong">Restrain the patient</button>
+                    <button data-answer="wrong">Administer oral glucose immediately</button>
+                    <button data-answer="wrong">Apply physical restraints</button>
+                </div>
+                <div class="quiz">
+                    <p>What protocol should be followed if blood glucose is &lt;70 mg/dL after a seizure?</p>
+                    <button data-answer="correct">Administer oral glucose</button>
+                    <button data-answer="wrong">Provide IV fluids</button>
+                    <button data-answer="wrong">Administer epinephrine</button>
+                    <button data-answer="wrong">Transport immediately</button>
+                </div>
+                <div class="quiz">
+                    <p>Should anything be inserted into the patient’s mouth during a seizure?</p>
+                    <button data-answer="correct">No, never insert anything</button>
+                    <button data-answer="wrong">Yes, to prevent biting</button>
+                    <button data-answer="wrong">Yes, to clear the airway</button>
+                    <button data-answer="wrong">Yes, if the patient is unresponsive</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sepsis (Adult) -->
+        <div class="scenario">
+            <button class="scenario-header">Sepsis (Adult)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Suspected infection with at least two of the following:
+                        <ul>
+                            <li>Temperature &gt;100.4°F or &lt;95.9°F.</li>
+                            <li>Heart rate &gt;100 bpm.</li>
+                            <li>Respiratory rate &gt;25.</li>
+                            <li>Hypotension (SBP &lt;90 mmHg).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Place the patient in a position of comfort or supine if hypotensive.</li>
+                    <li>Check blood glucose and treat hypoglycemia if needed.</li>
+                    <li>Provide oxygen as needed.</li>
+                    <li>Transport and notify the receiving facility of a "Sepsis Alert".</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>Which of the following is a sign of sepsis?</p>
+                    <button data-answer="correct">All of the above</button>
+                    <button data-answer="wrong">Temperature &lt;95.9°F</button>
+                    <button data-answer="wrong">Heart rate &gt;100 bpm</button>
+                    <button data-answer="wrong">Respiratory rate &gt;25</button>
+                </div>
+                <div class="quiz">
+                    <p>What position should a hypotensive patient with suspected sepsis be placed in?</p>
+                    <button data-answer="correct">Supine</button>
+                    <button data-answer="wrong">Prone</button>
+                    <button data-answer="wrong">Seated</button>
+                    <button data-answer="wrong">Head elevated at 45 degrees</button>
+                </div>
+                <div class="quiz">
+                    <p>What is an important action during transport of a sepsis patient?</p>
+                    <button data-answer="correct">Notify the receiving facility of a "Sepsis Alert"</button>
+                    <button data-answer="wrong">Administer oral glucose</button>
+                    <button data-answer="wrong">Provide IV fluids</button>
+                    <button data-answer="wrong">Administer epinephrine</button>
+                </div>
+                <div class="quiz">
+                    <p>What vital sign abnormality should prompt a suspicion of sepsis?</p>
+                    <button data-answer="correct">Temperature &gt;100.4°F</button>
+                    <button data-answer="wrong">Heart rate of 60 bpm</button>
+                    <button data-answer="wrong">Blood pressure &gt;120 mmHg</button>
+                    <button data-answer="wrong">Respiratory rate &lt;10</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Continue with all other scenarios... -->
+		
+		    <!-- Stroke (Adult & Pediatric) -->
+        <div class="scenario">
+            <button class="scenario-header">Stroke (Adult & Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Sudden onset of:
+                        <ul>
+                            <li>Blurred vision, slurred speech, or facial droop.</li>
+                            <li>Arm weakness or dizziness.</li>
+                            <li>Severe unexplained headache.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Perform Cincinnati Prehospital Stroke Scale:
+                        <ul>
+                            <li>Facial droop: Ask the patient to smile.</li>
+                            <li>Arm drift: Have the patient hold both arms out.</li>
+                            <li>Speech: Assess for slurred or incorrect words.</li>
+                        </ul>
+                    </li>
+                    <li>Position the patient with head elevated at 30 degrees.</li>
+                    <li>Check blood glucose. If &lt;70 mg/dL, treat per hypoglycemia protocol.</li>
+                    <li>Transport to the appropriate stroke center and notify as “Stroke Alert.”</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is a common sign of a stroke?</p>
+                    <button data-answer="correct">All of the above</button>
+                    <button data-answer="wrong">Blurred vision or slurred speech</button>
+                    <button data-answer="wrong">Arm weakness</button>
+                    <button data-answer="wrong">Facial droop</button>
+                </div>
+                <div class="quiz">
+                    <p>What tool is used to assess for stroke in the field?</p>
+                    <button data-answer="correct">Cincinnati Prehospital Stroke Scale</button>
+                    <button data-answer="wrong">Glasgow Coma Scale</button>
+                    <button data-answer="wrong">Trauma Score</button>
+                    <button data-answer="wrong">Pediatric Assessment Triangle</button>
+                </div>
+                <div class="quiz">
+                    <p>What position should a stroke patient be placed in during transport?</p>
+                    <button data-answer="correct">Head elevated at 30 degrees</button>
+                    <button data-answer="wrong">Prone</button>
+                    <button data-answer="wrong">Supine with legs elevated</button>
+                    <button data-answer="wrong">Side-lying position</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the priority notification for a stroke patient during transport?</p>
+                    <button data-answer="correct">"Stroke Alert"</button>
+                    <button data-answer="wrong">"Code Blue"</button>
+                    <button data-answer="wrong">"Sepsis Alert"</button>
+                    <button data-answer="wrong">"Trauma Alert"</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Syncope (Adult & Pediatric) -->
+        <div class="scenario">
+            <button class="scenario-header">Syncope (Adult & Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Transient loss of consciousness (fainting).</li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Place the patient in a supine position with feet elevated.</li>
+                    <li>Monitor airway, breathing, and circulation.</li>
+                    <li>Assess for underlying causes (e.g., hypoglycemia, stroke).</li>
+                    <li>Transport if abnormal findings are present.</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is syncope?</p>
+                    <button data-answer="correct">Transient loss of consciousness</button>
+                    <button data-answer="wrong">Sudden onset of severe headache</button>
+                    <button data-answer="wrong">Persistent low blood sugar</button>
+                    <button data-answer="wrong">Chronic hypotension</button>
+                </div>
+                <div class="quiz">
+                    <p>What position should a patient be placed in if they faint?</p>
+                    <button data-answer="correct">Supine with feet elevated</button>
+                    <button data-answer="wrong">Sitting upright</button>
+                    <button data-answer="wrong">Prone</button>
+                    <button data-answer="wrong">Side-lying position</button>
+                </div>
+                <div class="quiz">
+                    <p>Which protocol should be used if a syncope patient has abnormal findings on the Cincinnati Stroke Scale?</p>
+                    <button data-answer="correct">Stroke protocol</button>
+                    <button data-answer="wrong">Hypoglycemia protocol</button>
+                    <button data-answer="wrong">Sepsis protocol</button>
+                    <button data-answer="wrong">Cardiac arrest protocol</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the next step if a syncope patient does not regain consciousness promptly?</p>
+                    <button data-answer="correct">Transport immediately</button>
+                    <button data-answer="wrong">Provide fluids</button>
+                    <button data-answer="wrong">Monitor vitals for 15 minutes</button>
+                    <button data-answer="wrong">Administer glucose</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shock/Hypoperfusion (Pediatric) -->
+        <div class="scenario">
+            <button class="scenario-header">Shock/Hypoperfusion (Pediatric)</button>
+            <div class="scenario-content">
+                <h3>Indications:</h3>
+                <ul>
+                    <li>Signs of inadequate blood flow, such as:
+                        <ul>
+                            <li>Cool, clammy skin or delayed capillary refill (&gt;2 seconds).</li>
+                            <li>Altered mental status or hypotension (based on age-related vital signs).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>BLS Care:</h3>
+                <ul>
+                    <li>Place the patient supine with legs elevated.</li>
+                    <li>Monitor airway and vital signs.</li>
+                    <li>Transport to the closest appropriate facility.</li>
+                </ul>
+                <h3>Quiz:</h3>
+                <div class="quiz">
+                    <p>What is a sign of hypoperfusion in a pediatric patient?</p>
+                    <button data-answer="correct">Delayed capillary refill (&gt;2 seconds)</button>
+                    <button data-answer="wrong">Warm, flushed skin</button>
+                    <button data-answer="wrong">Hypertension</button>
+                    <button data-answer="wrong">Increased urinary output</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the recommended BLS action for pediatric shock?</p>
+                    <button data-answer="correct">Place the child in a supine position with legs elevated</button>
+                    <button data-answer="wrong">Administer oral glucose</button>
+                    <button data-answer="wrong">Provide chest compressions immediately</button>
+                    <button data-answer="wrong">Wait for ALS to arrive</button>
+                </div>
+                <div class="quiz">
+                    <p>What is the appropriate frequency for monitoring vital signs in pediatric shock?</p>
+                    <button data-answer="correct">Every 5 minutes</button>
+                    <button data-answer="wrong">Every 15 minutes</button>
+                    <button data-answer="wrong">Every 30 minutes</button>
+                    <button data-answer="wrong">Continuously</button>
+                </div>
+                <div class="quiz">
+                    <p>Which vital sign is most critical to assess in pediatric shock?</p>
+                    <button data-answer="correct">All of the above</button>
+                    <button data-answer="wrong">Pulse rate</button>
+                    <button data-answer="wrong">Blood pressure</button>
+                    <button data-answer="wrong">Capillary refill time</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bethesda Fire Department Training Portal</p>
+    </footer>
+
+    <script src="medical-scenarios.js"></script>
+</body>
+</html>

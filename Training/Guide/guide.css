@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3B2E71, #73C5E8);
+    color: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #3B2E71;
+    color: #FDF8DC;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #9CD7E7;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #FDF8DC;
+}
+
+/* Accordion Sections */
+.manual-section {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--purple-dark);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.manual-section:hover {
+  transform: translateY(-2px);
+}
+
+.manual-header {
+  width: 100%;
+  background: var(--blue-bright);
+  color: var(--white);
+  text-align: left;
+  padding: 14px 18px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+}
+
+.manual-header::after {
+  content: "▶";
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.manual-section.open .manual-header::after {
+  transform: rotate(90deg);
+}
+
+.manual-header:hover {
+  background: var(--blue-soft);
+  color: var(--purple-dark);
+}
+
+/* Smooth dropdown animation */
+.manual-content {
+  max-height: 0;
+  overflow: hidden;
+  background: var(--cream);
+  color: var(--purple-dark);
+  border-top: 2px solid var(--blue-bright);
+  padding: 0 20px;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.manual-section.open .manual-content {
+  max-height: 1000px; /* large enough to fit content */
+  padding: 20px;
+}
+
+/* Inside content */
+.manual-content h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--purple-dark);
+  border-bottom: 1px solid var(--blue-soft);
+  padding-bottom: 5px;
+}
+
+.manual-content p,
+.manual-content ul {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.manual-content ul {
+  list-style: disc inside;
+  padding-left: 10px;
+}
+
+.manual-content ul li {
+  margin: 6px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* Quiz Buttons (if you add quizzes like scenarios) */
+.quiz button {
+    display: block;
+    background: #73C5E8;
+    color: #FEFEFC;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.quiz button:hover {
+    background: #3B2E71;
+    color: #FDF8DC;
+    transform: scale(1.03);
+}
+
+.quiz-feedback {
+    margin-top: 10px;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #3B2E71;
+    font-size: 0.9rem;
+    color: #FDF8DC;
+    margin-top: 30px;
+}
