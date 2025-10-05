@@ -187,10 +187,17 @@ a {
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-size: 2.8rem;          /* keep your size */
   line-height: 1.2;
   margin-bottom: 1rem;
+
+  /* NEW: high-contrast + readability on gradient */
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.08); /* subtle micro-outline (WebKit) */
+  letter-spacing: 0.3px;       /* tiny spacing for clarity */
 }
+
 
 .slogan {
   font-size: 1.25rem;
@@ -257,44 +264,69 @@ a {
    About
 ------------------------------------ */
 .about {
+  /* keep the section spacing; make the CARD live inside the container */
+  padding: 4rem 1rem;
   background: linear-gradient(to bottom, var(--cream), var(--white));
 }
 
-.about-flex {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+/* Card that “pops” inside the section */
+.about .container {
+  background: linear-gradient(to bottom right, #fffdf5, #fdf8dc);
+  border-radius: 0; /* 👈 changed from 16px */
+  box-shadow: 0 8px 28px rgba(59, 46, 113, 0.12);
+  padding: 2rem 1.75rem;
 }
 
-.about-image img {
-  width: 250px;
-  animation: float 4s ease-in-out infinite;
+
+/* Heading polish + accent underline only in About */
+.about .section-head h2 {
+  font-weight: 900;
+  position: relative;
 }
 
-.about-text {
-  flex: 1;
+.about .section-head h2::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 3px;
+  background: var(--bright-blue);
+  border-radius: 2px;
+  margin: 0.6rem auto 0;
 }
 
-.about-text p {
-  margin-bottom: 1.2rem;
+.about .section-head .section-subtitle {
+  color: #555;
+  margin-top: 0.6rem;
 }
 
-.about-text ul {
-  list-style: none;
-  padding: 0;
+/* Content layout used by your current HTML */
+.about-grid {
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #2d2461;
 }
 
-.about-text li {
-  margin-bottom: 0.6rem;
+.about-grid p {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+/* Bullet list styling */
+.about-points {
+  margin: 1rem 0 1.5rem 2rem;
+  list-style: disc;
+}
+
+.about-points li {
+  margin-bottom: 0.8rem;
   font-weight: 500;
+  line-height: 1.6;
 }
 
-.about-text li::before {
-  content: "✔ ";
+.about-points li::marker {
   color: var(--bright-blue);
-  font-weight: 700;
 }
 
 /* ------------------------------------
@@ -361,6 +393,20 @@ a {
 .section-cta {
   text-align: center;
   margin-top: 2rem;
+}
+.section-cta .btn-outline {
+  border: 2px solid var(--bright-blue);
+  color: var(--bright-blue);
+  font-weight: 600;
+  background: rgba(115, 197, 232, 0.08); /* subtle blue tint behind text */
+  transition: all 0.3s ease;
+}
+
+.section-cta .btn-outline:hover {
+  background: var(--bright-blue);
+  color: var(--white);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(115, 197, 232, 0.35);
 }
 
 /* ------------------------------------

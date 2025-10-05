@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEMO • Coming Soon</title>
+  <meta name="description" content="New NEMO resource launching soon. Stay tuned for updates." />
+  <link rel="stylesheet" href="../homepage.css" />
+  <link rel="icon" href="assets/favicon.png" />
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="logo" href="index.html">NEMO</a>
+
+      <nav aria-label="Primary">
+        <ul id="primaryNav" class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#mission">Our Mission</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#training">Training</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="#contact-form">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="navToggle" class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container hero-content" style="justify-content:center;">
+      <div class="hero-text" style="text-align:center;">
+        <h1>Coming Soon</h1>
+        <p class="slogan">We’re building something useful for NEMO members and future EMTs.</p>
+        <div class="hero-ctas" style="justify-content:center;">
+          <a class="btn btn-primary" href="resources.html">Back to Resources</a>
+          <a class="btn btn-outline" href="#contact-form">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details -->
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>What to Expect</h2>
+          <p class="section-subtitle">A new resource to support training, outreach, and leadership.</p>
+        </div>
+
+        <div class="link-grid">
+          <div class="link-card" aria-disabled="true">
+            <h3>📚 Better Training Access</h3>
+            <p>Quick paths to EMT-B materials, CPR/AED signup, and checklists.</p>
+          </div>
+
+          <div class="link-card" aria-disabled="true">
+            <h3>🗓️ Faster Scheduling</h3>
+            <p>Find upcoming workshops and info sessions in one place.</p>
+          </div>
+
+          <div class="link-card" aria-disabled="true">
+            <h3>🤝 Opportunities</h3>
+            <p>Volunteer shifts and clinical experience signups—organized and easy.</p>
+          </div>
+
+          <div class="link-card" aria-disabled="true">
+            <h3>📣 Updates</h3>
+            <p>Announcements and member news without the scroll-hunt.</p>
+          </div>
+        </div>
+
+        <div class="section-cta" style="margin-top:2.5rem;">
+          <a class="btn btn-outline" href="mailto:nemo@u.northwestern.edu?subject=Notify%20me%20about%20the%20new%20NEMO%20resource">✉️ Notify Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stay Connected -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Stay Connected</h2>
+          <p class="section-subtitle">Follow for launch updates and upcoming events.</p>
+        </div>
+
+        <div class="link-grid">
+          <a class="link-card" href="https://www.instagram.com/nemo.northwestern?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+            <h3>📸 Instagram</h3>
+            <p>Photos, recaps, and announcements.</p>
+          </a>
+
+          <a class="link-card" href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer">
+            <h3>💬 Slack</h3>
+            <p>Join the conversation and get real-time updates.</p>
+          </a>
+
+          <a class="link-card" href="#contact-form">
+            <h3>✉️ Email NEMO</h3>
+            <p>Have questions? Reach our officer team.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+	  
+	  <!-- Contact -->
+	<form id="contact-form" class="contact-form" action="https://formspree.io/f/mqayldyz" method="POST">
+
+	  <h2 class="contact-title">Contact NEMO</h2>
+	  <p class="contact-intro">
+		Have a question about training, events, or membership? Send us a message below — we’ll get back to you as soon as possible.
+	  </p>
+
+	  <div class="form-row">
+		<label for="name">Full Name</label>
+		<input id="name" name="name" type="text" placeholder="Your full name" required />
+	  </div>
+
+	  <div class="form-row">
+		<label for="email">Email Address</label>
+		<input id="email" name="email" type="email" placeholder="you@northwestern.edu" required />
+	  </div>
+
+	  <div class="form-row">
+		<label for="subject">Subject</label>
+		<input id="subject" name="subject" type="text" placeholder="Topic or reason for contacting" />
+	  </div>
+
+	  <div class="form-row">
+		<label for="message">Message</label>
+		<textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+	  </div>
+
+	  <!-- Optional hidden fields -->
+	  <input type="hidden" name="_subject" value="New message from NEMO Contact Form" />
+	  <input type="hidden" name="_captcha" value="false" />
+	  <input type="hidden" name="_next" value="https://nemo-northwestern.org/thanks.html" />
+
+	  <!-- Anti-spam honeypot -->
+	  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+	  <button type="submit" class="btn btn-primary">Send Message</button>
+
+	  <p class="form-note">We typically reply within 1–2 business days.</p>
+	</form>
+
+        <!-- ✅ Update links or add new ones to change contact/social options -->
+        <div class="contact-socials">
+          <a href="https://www.instagram.com/nemo.northwestern?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer">Slack</a>
+          <a href="mailto:nemo@u.northwestern.edu">Email</a>
+        </div>
+  
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-logo">NEMO</div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+      </nav>
+      <div class="footer-actions">
+        <a class="btn btn-sm" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container" style="text-align:center; margin-top:1rem;">
+      <small>© <span id="year"></span> Northwestern Emergency Medical Organization</small>
+    </div>
+  </footer>
+
+  <script src="../homepage.js"></script>
+</body>
+</html>
