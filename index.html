@@ -46,8 +46,8 @@
         <!-- ✅ Edit text inside <p>
              ✅ Replace href="#" with actual registration/event link -->
         <p>
-          <strong>🚨 Update:</strong> Applications due • Sept 30 @ 6:00 PM (placeholder)•
-          <a href="#" class="banner-link">Register here →</a>
+          <strong>🚨 Don't Forget!:</strong> Applications due • Oct 12 @ Midnight •
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_6FbbIqfKuDitq_y510OKZGmBkIlXNbGVqUie_57GuXtlQg/viewform" class="banner-link">Register here →</a>
         </p>
       </div>
     </div>
@@ -421,33 +421,49 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <div class="section-head">
-          <!-- ✅ Edit heading/subtitle text -->
-          <h2>Contact Us</h2>
-          <p class="section-subtitle">Questions, ideas, or partnerships—say hello!</p>
-        </div>
+		<!-- Contact -->
+		!-- NEMO Contact Form -->
+	<form
+	  class="contact-form"
+	  action="https://formspree.io/f/mqayldyz"
+	  method="POST">
+	  <h2 class="contact-title">Contact NEMO</h2>
+	  <p class="contact-intro">
+		Have a question about training, events, or membership? Send us a message below — we’ll get back to you as soon as possible.
+	  </p>
 
-        <!-- ✅ Contact form: 
-             - You can edit label text and placeholder text.
-             - Keep 'id' and 'name' attributes the same (they connect form fields). -->
-        <form class="contact-form" action="#" method="post" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@northwestern.edu" required />
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+	  <div class="form-row">
+		<label for="name">Full Name</label>
+		<input id="name" name="name" type="text" placeholder="Your full name" required />
+	  </div>
+
+	  <div class="form-row">
+		<label for="email">Email Address</label>
+		<input id="email" name="email" type="email" placeholder="you@northwestern.edu" required />
+	  </div>
+
+	  <div class="form-row">
+		<label for="subject">Subject</label>
+		<input id="subject" name="subject" type="text" placeholder="Topic or reason for contacting" />
+	  </div>
+
+	  <div class="form-row">
+		<label for="message">Message</label>
+		<textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+	  </div>
+
+	  <!-- Optional hidden fields -->
+	  <input type="hidden" name="_subject" value="New message from NEMO Contact Form" />
+	  <input type="hidden" name="_captcha" value="false" />
+	  <input type="hidden" name="_next" value="https://nemo-northwestern.org/thanks.html" />
+
+	  <!-- Anti-spam honeypot -->
+	  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+	  <button type="submit" class="btn btn-primary">Send Message</button>
+
+	  <p class="form-note">We typically reply within 1–2 business days.</p>
+	</form>
 
         <!-- ✅ Update links or add new ones to change contact/social options -->
         <div class="contact-socials">
