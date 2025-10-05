@@ -537,25 +537,75 @@ a {
 /* ------------------------------------
    Team
 ------------------------------------ */
+/* ------------------------------------
+   Team Grid Adjustments
+------------------------------------ */
+/* ------------------------------------
+   Team Grid Adjustments (7 per row)
+------------------------------------ */
+/* ------------------------------------
+   Team Grid Adjustments (7 per row)
+------------------------------------ */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.5rem;
   text-align: center;
 }
 
 .team-card img {
-  width: 160px;
-  height: 160px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 1rem;
-  transition: box-shadow 0.3s ease;
+  margin: 0 auto 0.75rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  image-rendering: -webkit-optimize-contrast; /* ? improves sharpness in Chrome/Safari */
+  image-rendering: crisp-edges; /* ? fallback for other browsers */
+  transform: translateZ(0); /* ? fixes GPU scaling blur */
+  backface-visibility: hidden;
 }
 
+
 .team-card img:hover {
-  box-shadow: 0 0 20px var(--soft-blue);
+  box-shadow: 0 0 16px var(--soft-blue);
 }
+
+.team-card h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.role {
+  font-weight: 600;
+  color: var(--bright-blue);
+  font-size: 0.9rem;
+}
+
+.team-card .bio {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+  .team-card h3 { font-size: 0.95rem; }
+  .team-card .role { font-size: 0.9rem; }
+  .team-card .bio  { font-size: 0.85rem; }
+}
+
+/* Small screens: give each card more room */
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .team-card img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
 
 .role {
   font-weight: 600;
