@@ -9,21 +9,119 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
+  <link rel="stylesheet" href="../homepage.css" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Override training page header to match main site exactly */
+    .site-header {
+      position: sticky !important;
+      top: 0 !important;
+      z-index: 1000 !important;
+      background: var(--white) !important;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+      color: inherit !important;
+      text-align: left !important;
+      padding: 0 !important;
+    }
+    
+    .site-header .navbar {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      padding: 1rem 0 !important;
+    }
+    
+    .site-header .logo {
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 900 !important;
+      font-size: 1.5rem !important;
+      color: var(--purple) !important;
+      margin: 0 !important;
+    }
+    
+    .site-header .nav-links {
+      list-style: none !important;
+      display: flex !important;
+      gap: 1.5rem !important;
+    }
+    
+    .site-header .nav-links a {
+      position: relative !important;
+      font-weight: 500 !important;
+      color: var(--purple) !important;
+      transition: color 0.3s ease !important;
+    }
+    
+    .site-header .nav-links a::after {
+      content: '' !important;
+      position: absolute !important;
+      bottom: -4px !important;
+      left: 0 !important;
+      width: 0 !important;
+      height: 2px !important;
+      background: var(--bright-blue) !important;
+      transition: width 0.3s ease !important;
+    }
+    
+    .site-header .nav-links a:hover {
+      color: var(--bright-blue) !important;
+    }
+    
+    .site-header .nav-links a:hover::after {
+      width: 100% !important;
+    }
+    
+    .banner-link {
+      color: var(--bright-blue) !important;
+    }
+    
+    /* Fix hero section text color */
+    .hero-content h2 {
+      color: var(--purple) !important;
+    }
+    
+    .hero-content p {
+      color: var(--purple) !important;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container navbar">
-      <h1 class="logo">NEMO Training Portal</h1>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../../Resources/About/about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.redcross.org/take-a-class/cpr" target="_blank">CPR/AED Resources</a></li>
-        </ul>
-      </nav>
+  <!-- Top: Sticky Navbar -->
+  <header class="site-header" id="top" role="banner">
+    <nav class="navbar container" aria-label="Primary">
+      <div class="brand">
+        <a href="../index.html" class="logo" aria-label="NEMO Home">NEMO</a>
+      </div>
+
+      <!-- Mobile menu button (hook for JS) -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="primaryNav" role="menubar">
+        <li role="none"><a role="menuitem" href="../index.html#about">About Us</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#mission">Our Mission</a></li>
+        <li role="none"><a role="menuitem" href="../Events/events.html">Events</a></li>
+        <li role="none"><a role="menuitem" href="traininghomepage.html">Training</a></li>
+        <li role="none"><a role="menuitem" href="../Team/team.html">Team</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#resources">Resources</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#faq">FAQ</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- News / Updates Banner -->
+    <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
+      <div class="news-marquee container">
+        <p>
+         <br> <strong>📅 Training Portal:</strong> Access all your NEMO training resources •
+          <a href="#links" class="banner-link">Explore modules →</a>
+          <strong>🎓 Get Certified:</strong> CPR/AED Resources •
+          <a href="https://www.redcross.org/take-a-class/cpr" class="banner-link" target="_blank">Learn more →</a>
+        </p>
+      </div>
     </div>
   </header>
 
@@ -103,5 +201,9 @@
       <p class="footer-copy">© 2025 NEMO. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- JS -->
+  <script src="../homepage.js" defer></script>
+  <script src="traininghomepage.js" defer></script>
 </body>
 </html>
