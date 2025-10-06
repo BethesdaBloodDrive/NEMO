@@ -1,0 +1,171 @@
+/* ------------------------------------
+   NEMO • TEAMS.CSS (Team page only)
+------------------------------------ */
+
+/* Fonts & Root Vars */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --purple: #3B2E71;
+  --bright-blue: #73C5E8;
+  --soft-blue: #9CD7E7;
+  --cream: #FDF8DC;
+  --white: #FEFEFC;
+
+  --max-width: 1100px;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--purple);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* Utilities */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+.section   { padding: 4rem 1rem; }
+.section-head { text-align: center; margin-bottom: 2.5rem; }
+.section-head h2 { font-size: 2rem; margin-bottom: 0.5rem; }
+.section-subtitle { font-size: 1.1rem; color: #444; }
+
+/* ------------------------------------
+   Navbar (kept minimal for team page)
+------------------------------------ */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900; font-size: 1.5rem; color: var(--purple);
+}
+.nav-links { list-style: none; display: flex; gap: 1.5rem; }
+.nav-links a { position: relative; font-weight: 500; transition: color .3s ease; }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 2px; background: var(--bright-blue); transition: width .3s ease;
+}
+.nav-links a:hover { color: var(--bright-blue); }
+.nav-links a:hover::after { width: 100%; }
+
+/* Mobile toggle */
+.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: 0; cursor: pointer; }
+.nav-toggle-bar { width: 25px; height: 3px; background: var(--purple); border-radius: 2px; }
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none; flex-direction: column; background: var(--white);
+    padding: 1rem; position: absolute; right: 1rem; top: 60px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: flex; }
+}
+
+/* ------------------------------------
+   Buttons (used for consistency)
+------------------------------------ */
+.btn {
+  display: inline-block; padding: 0.8rem 1.6rem;
+  border-radius: 2rem; font-weight: 600; transition: all .3s ease;
+}
+.btn-outline { border: 2px solid var(--bright-blue); color: var(--bright-blue); }
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.9rem; }
+
+/* ------------------------------------
+   Team Layout (rows you requested)
+------------------------------------ */
+.team-rows { display: flex; flex-direction: column; gap: 2.25rem; }
+
+.team-row {
+  display: grid; gap: 1.75rem; justify-items: center;
+}
+
+/* Presets for per-row sizing */
+.team-row--1 { grid-template-columns: 1fr; justify-content: center; }
+.team-row--2 { grid-template-columns: repeat(2, minmax(200px, 1fr)); }
+.team-row--3 { grid-template-columns: repeat(3, minmax(200px, 1fr)); }
+
+/* Card */
+.team-card {
+  background: var(--white);
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.12); }
+
+/* BIGGER, SQUARE headshots */
+.team-card img {
+  width: 200px;      /* bigger */
+  height: 200px;     /* perfect square */
+  border-radius: 10px;        /* square with subtle rounding; set to 0 for hard corners */
+  object-fit: cover;
+  margin: 0 auto 0.9rem;
+  transition: box-shadow .25s ease, transform .25s ease;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.team-card img:hover { box-shadow: 0 0 18px var(--soft-blue); }
+
+.team-card h3 { font-size: 1.05rem; margin-bottom: 0.35rem; }
+.role { font-weight: 700; color: var(--bright-blue); font-size: 0.95rem; }
+.team-card .bio { font-size: 0.92rem; color: #333; }
+
+/* Make Presidents/VP rows feel a touch more prominent (optional) */
+.team-row--2 .team-card img { width: 220px; height: 220px; } /* presidents + pairs a bit larger */
+.team-row--1 .team-card img { width: 220px; height: 220px; } /* single centered role */
+
+/* Responsive tweaks */
+@media (max-width: 1024px) {
+  .team-row--3 { grid-template-columns: repeat(3, minmax(180px, 1fr)); }
+  .team-card img { width: 180px; height: 180px; }
+}
+@media (max-width: 900px) {
+  .team-row--3 { grid-template-columns: repeat(2, minmax(170px, 1fr)); }
+}
+@media (max-width: 600px) {
+  .team-row--1, .team-row--2, .team-row--3 { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+  .team-card img { width: 140px; height: 140px; }
+  .team-card .bio { display: none; } /* keep rows tight on phones */
+}
+
+/* ------------------------------------
+   Footer
+------------------------------------ */
+.site-footer { background: var(--purple); color: var(--cream); padding: 2rem 1rem; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; align-items: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; }
+.footer-nav ul { list-style: none; display: flex; gap: 1rem; }
+.footer-nav a { color: var(--cream); transition: color .3s ease; }
+.footer-nav a:hover { color: var(--soft-blue); }
+.footer-actions .btn { border: 2px solid var(--cream); color: var(--cream); }
+.footer-actions .btn:hover { background: var(--cream); color: var(--purple); }
+
+/* ------------------------------------
+   Fade-in (works with your homepage.js)
+------------------------------------ */
+.section { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+.section.visible { opacity: 1; transform: translateY(0); }

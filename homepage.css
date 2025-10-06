@@ -587,6 +587,51 @@ a {
   color: #333;
 }
 
+/* === Team rows (explicit per-row layout) === */
+.team-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Base card grid for each row */
+.team-row {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* Row presets */
+.team-row--1 {               /* single, centered */
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.team-row--2 {               /* two across */
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+}
+
+.team-row--3 {               /* three across */
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .team-row--3 {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .team-row--2,
+  .team-row--3,
+  .team-row--1 {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+  .team-card img { width: 80px; height: 80px; }
+  .team-card .bio { display: none; } /* keep rows tight on phones */
+}
+
 /* Larger screens */
 @media (min-width: 1024px) {
   .team-card h3 { font-size: 0.95rem; }
@@ -779,7 +824,10 @@ a {
 
 .contact-socials {
   text-align: center;
+  margin-top: 1.5rem;     /* space above socials */
+  margin-bottom: 2.5rem;  /* space before footer */
 }
+
 
 .contact-socials a {
   margin: 0 0.5rem;
