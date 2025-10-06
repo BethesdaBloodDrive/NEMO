@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team • NEMO • Northwestern Emergency Medical Organization</title>
+  <meta name="description" content="Meet the NEMO team - Northwestern's Emergency Medical Organization leaders, instructors, and organizers." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+<body>
+
+  <!-- Top: Sticky Navbar -->
+  <header class="site-header" id="top" role="banner">
+    <nav class="navbar container" aria-label="Primary">
+      <div class="brand">
+        <a href="index.html" class="logo" aria-label="NEMO Home">NEMO</a>
+      </div>
+
+      <!-- Mobile menu button (hook for JS) -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="primaryNav" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html#about">About Us</a></li>
+        <li role="none"><a role="menuitem" href="index.html#mission">Our Mission</a></li>
+        <li role="none"><a role="menuitem" href="index.html#events">Events</a></li>
+        <li role="none"><a role="menuitem" href="Training/traininghomepage.html">Training</a></li>
+        <li role="none"><a role="menuitem" href="team.html">Team</a></li>
+        <li role="none"><a role="menuitem" href="index.html#resources">Resources</a></li>
+        <li role="none"><a role="menuitem" href="index.html#faq">FAQ</a></li>
+        <li role="none"><a role="menuitem" href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Page Header -->
+    <section class="hero container" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Meet the Team</h1>
+          <p class="slogan">Leaders, instructors, and organizers driving NEMO's mission forward.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="index.html#contact">Join Us</a>
+            <a class="btn btn-outline" href="index.html">Back to Home</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <figure class="mascot-wrap" aria-label="NEMO mascot">
+            <img src="images/mascot.png" alt="NEMO fish mascot placeholder" class="mascot mascot--hero" />
+            <figcaption>Nathan the Camel</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section team">
+      <div class="container">
+        <div class="section-head">
+          <h2>Meet the Team</h2>
+          <p class="section-subtitle">Leaders, instructors, and organizers.</p>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <img src="images/mascot.png" alt="Team member headshot" />
+            <h3>Nathan Miller</h3>
+            <p class="role">Co-President</p>
+            <p class="bio">Pre-med • Loves wilderness first aid</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/ritvik.jpeg" alt="Team member headshot" />
+            <h3>Ritvik Viniak</h3>
+            <p class="role">VP of External Affairs</p>
+            <p class="bio">Logistics, scheduling, and snacks</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/Victoria.JPG" alt="Team member headshot" />
+            <h3>Anne Sefen</h3>
+            <p class="role">External Affairs Secretary</p>
+            <p class="bio">Logistics, scheduling, and snacks</p>
+          </article>
+
+          <article class="team-card">
+            <img src="images/abby.jpeg" alt="Team member headshot" />
+            <h3>Abby Wertz</h3>
+            <p class="role">Mentor Secretary</p>
+            <p class="bio">Logistics, scheduling, and snacks</p>
+          </article>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="section-cta" style="margin-bottom: 2rem;">
+          <h3>Want to Join Our Team?</h3>
+          <p>We're always looking for passionate students to join NEMO and help build Northwestern's emergency medical community.</p>
+          <div style="margin-top: 4rem; margin-bottom: 1rem;">
+            <a href="index.html#contact" class="btn btn-primary">Get Involved</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/mascot-placeholder.png" alt="" class="mascot mascot--footer" aria-hidden="true" />
+        <span class="footer-logo">NEMO</span>
+        <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#resources">Resources</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-actions">
+        <a class="btn btn-outline btn-sm" href="index.html#contact">Join / Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Decorative floating mascot sprinkles -->
+  <img src="images/mascot.placeholder" class="mascot mascot--float-1" alt="" aria-hidden="true" />
+  <img src="images/mascot.placeholder" class="mascot mascot--float-2" alt="" aria-hidden="true" />
+
+  <!-- JS -->
+  <script src="homepage.js" defer></script>
+</body>
+</html>
