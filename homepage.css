@@ -980,3 +980,76 @@ a {
     font-size: 2rem;
   }
 }
+
+/* =======================================================
+   ?? EXTRA RESPONSIVE ENHANCEMENTS (ADDED ONLY)
+   Keep desktop the same; these just scale things nicely.
+   ======================================================= */
+
+/* Tighten vertical rhythm a bit on tablets */
+@media (max-width: 1024px) {
+  .section { padding: 3.5rem 1rem; }
+  .hero { padding: 4.5rem 1rem; }
+  .carousel img { height: 340px; }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .navbar { padding: 0.85rem 0; }
+  .logo { font-size: 1.35rem; }
+  .news-banner { font-size: 0.85rem; }
+
+  .hero-content { gap: 1.75rem; }
+  .hero .mascot { width: 170px; }
+  .slogan { font-size: 1.1rem; }
+
+  .event-grid,
+  .cards,
+  .link-grid { gap: 1.25rem; }
+
+  .event-card,
+  .card { padding: 1.25rem; }
+
+  .carousel img { height: 300px; }
+  .footer-grid { gap: 1.25rem; }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  .container { padding: 0 0.9rem; }
+  .section { padding: 3rem 1rem; }
+
+  .hero { padding: 3.5rem 1rem; }
+  .hero-text h1 { font-size: 1.9rem; }
+  .slogan { font-size: 1rem; }
+  .hero-ctas { flex-wrap: wrap; justify-content: center; }
+  .hero-ctas .btn { min-width: 44%; text-align: center; }
+
+  .event-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr; }
+  .link-grid { grid-template-columns: 1fr; }
+
+  .carousel img { height: 240px; }
+  .footer-nav ul { flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+  .footer-actions .btn { padding: 0.6rem 1.1rem; }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+  .logo { font-size: 1.2rem; }
+  .hero-text h1 { font-size: 1.7rem; }
+  .hero .mascot { width: 150px; }
+  .news-banner { padding: 0.2rem 0.4rem; font-size: 0.8rem; }
+  .carousel img { height: 210px; }
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .mascot, .carousel-track { animation: none !important; transition: none !important; }
+}
+
+/* iOS safe-area love */
+@supports (padding: max(0px)) {
+  body { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+}
