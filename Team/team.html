@@ -6,176 +6,217 @@
   <title>NEMO • Team</title>
   <meta name="description" content="Meet the NEMO team — student EMT leaders at Northwestern." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <!-- If team.html is next to index.html, change to href="homepage.css" -->
+  <link rel="stylesheet" href="../homepage.css" />
   <link rel="stylesheet" href="team.css" />
+  <link rel="icon" href="../assets/favicon.png" />
+  <style>html:focus-within{scroll-behavior:smooth}</style>
 </head>
-<body>
 
-  <!-- Minimal header (keeps your navbar look) -->
+<body>
+  <!-- Accessibility -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <!-- Header (EXACTLY like homepage) -->
   <header class="site-header" id="top" role="banner">
     <nav class="navbar container" aria-label="Primary">
       <div class="brand">
         <a href="../index.html#top" class="logo" aria-label="NEMO Home">NEMO</a>
       </div>
+
+      <!-- Mobile Menu -->
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
+
       <ul class="nav-links" id="primaryNav" role="menubar">
-        <li role="none"><a role="menuitem" href="../index.html#about">About</a></li>
-        <li role="none"><a role="menuitem" href="../index.html#mission">Mission</a></li>
-        <li role="none"><a role="menuitem" href="../index.html#training">Training</a></li>
+        <li role="none"><a role="menuitem" href="../index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#about">About Us</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#mission">Our Mission</a></li>
+        <li role="none"><a role="menuitem" href="../Events/events.html">Events</a></li>
+        <li role="none"><a role="menuitem" href="../Training/traininghomepage.html">Training</a></li>
+        <li role="none"><a role="menuitem" href="team.html" aria-current="page">Team</a></li>
         <li role="none"><a role="menuitem" href="../index.html#resources">Resources</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#faq">FAQ</a></li>
         <li role="none"><a role="menuitem" href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <!-- News / Updates Banner (EXACT structure) -->
+    <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
+      <div class="news-marquee container">
+        <p>
+          <strong>👥 Meet the Team:</strong> Leaders, instructors, and organizers •
+          <a href="#team" class="banner-link">Jump to team →</a>
+          <strong>🚑 Interested in joining?</strong> Reach out anytime •
+          <a href="../index.html#contact" class="banner-link">Contact us →</a>
+        </p>
+      </div>
+    </div>
   </header>
 
-  <main id="main">
-    <!-- TEAM ONLY -->
-<section id="team" class="section team visible">
-  <div class="container">
-    <div class="section-head">
-      <h2>Meet the Team</h2>
-      <p class="section-subtitle">Leaders, instructors, and organizers.</p>
+	
+  <!-- Main (keep team cards exactly like before; fixed-size handled by CSS) -->
+  <main id="main" role="main">
+	  <!-- Hero Section (identical style to homepage) -->
+<section id="hero" class="hero container">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Meet the NEMO Team</h1>
+      <p class="slogan">
+        Northwestern’s Student EMT Leaders — Dedicated to Service, Training, and Teamwork.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#team">View Team</a>
+        <a class="btn btn-outline" href="../index.html#contact">Join NEMO</a>
+      </div>
     </div>
-
-    <div class="team-rows">
-
-      <!-- Row 1: Presidents (2) -->
-      <div class="team-row team-row--2">
-        <article class="team-card">
-          <img src="../images/Nathan.jpeg" alt="Headshot of Nathan Miller" />
-          <h3>Nathan Miller</h3>
-          <p class="role">Co-President</p>
-			<p class="bio">Biomedical Engineering, ISP, <br>Neuroscience</p>
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Dylan Stone" />
-          <h3>Dylan Stone</h3>
-          <p class="role">Co-President</p>
-<!--			<p class="bio">Biomedical Engineering, ISP, <br>Neuroscience</p>-->
-        </article>
-      </div>
-
-      <!-- Row 2: External (VP + 2 Secretaries) -->
-      <div class="team-row team-row--3">
-        <article class="team-card">
-          <img src="../images/ritvik.jpeg" alt="Headshot of Ritvik Viniak" />
-          <h3>Ritvik Viniak</h3>
-          <p class="role">VP of External Affairs</p>
-<!--          <p class="bio">Logistics, scheduling, and snacks</p>-->
-        </article>
-
-        <article class="team-card">
-          <img src="../images/Victoria.JPG" alt="Headshot of Anne Sefen" />
-          <h3>Victoria Sefen</h3>
-          <p class="role">External Affairs Secretary</p>
-          <p class="bio">Biomedical Engineering <br>&amp; Economics</p>
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">External Affairs Secretary</p>
-<!--          <p class="bio">Logistics, scheduling, and snacks</p>-->
-        </article>
-      </div>
-
-      <!-- Row 3: Education (VP + 2 Secretaries) -->
-      <div class="team-row team-row--3">
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">VP of Education</p>
-<!--          <p class="bio">Curriculum & training ops</p>-->
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">Education Secretary</p>
-<!--          <p class="bio">Workshops, check-ins, resources</p>-->
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">Education Secretary</p>
-<!--          <p class="bio">Scheduling & materials</p>-->
-        </article>
-      </div>
-
-
-
-      <!-- Row 5: Mentors (VP + Secretary) -->
-      <div class="team-row team-row--3">
-		   <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Nikolas Delis" />
-          <h3>Nikolas Delis</h3>
-          <p class="role">VP of Finances</p>
-<!--          <p class="bio">Community partnerships &amp; events</p>-->
-        </article>
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">VP of Mentors</p>
-          <p class="bio">Mentor program lead</p>
-        </article>
-
-        <article class="team-card">
-          <img src="../images/abby.jpeg" alt="Headshot of Abby Wertz" />
-          <h3>Abby Wertz</h3>
-          <p class="role">Mentor Secretary</p>
-<!--          <p class="bio"></p>-->
-        </article>
-      </div>
-
-		      <!-- Row 6: Equiptment secratary (2) -->
-      <div class="team-row team-row--2">
-        <article class="team-card">
-          <img src="../images/anay.jpeg" alt="Headshot of Taylor Kim" />
-          <h3>Anay Patel</h3>
-          <p class="role">Equiptment Secretary</p>
-          <p class="bio">Community &amp; events</p>
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">Social &amp; Recruitment Chair</p>
-          <p class="bio">Outreach &amp; tabling</p>
-        </article>
-      </div>
-      <!-- Row 6: Social & Recruitment Chairs (2) -->
-      <div class="team-row team-row--2">
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Anay Patel</h3>
-          <p class="role">Social &amp; Recruitment Chair</p>
-          <p class="bio">Community &amp; events</p>
-        </article>
-
-        <article class="team-card">
-          <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
-          <h3>Taylor Kim</h3>
-          <p class="role">Social &amp; Recruitment Chair</p>
-          <p class="bio">Outreach &amp; tabling</p>
-        </article>
-      </div>
-
+    <div class="hero-art">
+      <figure class="mascot-wrap" aria-label="NEMO mascot">
+        <img src="../images/mascot.png" alt="Nathan the Camel mascot" class="mascot mascot--hero" />
+        <figcaption>Nathan the Camel</figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
+    <section id="team" class="section team visible">
+      <div class="container">
+        <div class="section-head">
+          <h2>Meet the Team</h2>
+          <p class="section-subtitle">Leaders, instructors, and organizers.</p>
+        </div>
 
+        <div class="team-rows">
+          <!-- Row 1: Presidents (2) -->
+          <div class="team-row team-row--2">
+            <article class="team-card">
+              <img src="../images/Nathan.jpeg" alt="Headshot of Nathan Miller" />
+              <h3>Nathan Miller</h3>
+              <p class="role">Co-President</p>
+              <p class="bio">Biomedical Engineering, ISP, <br>Neuroscience</p>
+            </article>
 
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Dylan Stone" />
+              <h3>Dylan Stone</h3>
+              <p class="role">Co-President</p>
+              <!-- <p class="bio">Biomedical Engineering, ISP, <br>Neuroscience</p> -->
+            </article>
+          </div>
 
+          <!-- Row 2: External (VP + 2 Secretaries) -->
+          <div class="team-row team-row--3">
+            <article class="team-card">
+              <img src="../images/ritvik.jpeg" alt="Headshot of Ritvik Viniak" />
+              <h3>Ritvik Viniak</h3>
+              <p class="role">VP of External Affairs</p>
+              <!-- <p class="bio">Logistics, scheduling, and snacks</p> -->
+            </article>
+
+            <article class="team-card">
+              <img src="../images/Victoria.JPG" alt="Headshot of Victoria Sefen" />
+              <h3>Victoria Sefen</h3>
+              <p class="role">External Affairs Secretary</p>
+              <p class="bio">Biomedical Engineering <br>&amp; Economics</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Taylor Kim" />
+              <h3>Taylor Kim</h3>
+              <p class="role">External Affairs Secretary</p>
+              <!-- <p class="bio">Logistics, scheduling, and snacks</p> -->
+            </article>
+          </div>
+
+          <!-- Row 3: Education (VP + 2 Secretaries) -->
+          <div class="team-row team-row--3">
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of VP of Education" />
+              <h3>Taylor Kim</h3>
+              <p class="role">VP of Education</p>
+              <!-- <p class="bio">Curriculum & training ops</p> -->
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Education Secretary" />
+              <h3>Taylor Kim</h3>
+              <p class="role">Education Secretary</p>
+              <!-- <p class="bio">Workshops, check-ins, resources</p> -->
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Education Secretary" />
+              <h3>Taylor Kim</h3>
+              <p class="role">Education Secretary</p>
+              <!-- <p class="bio">Scheduling & materials</p> -->
+            </article>
+          </div>
+
+          <!-- Row 4: Finances / Mentors -->
+          <div class="team-row team-row--3">
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Nikolas Delis" />
+              <h3>Nikolas Delis</h3>
+              <p class="role">VP of Finances</p>
+              <!-- <p class="bio">Community partnerships &amp; events</p> -->
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of VP of Mentors" />
+              <h3>Taylor Kim</h3>
+              <p class="role">VP of Mentors</p>
+              <p class="bio">Mentor program lead</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../images/abby.jpeg" alt="Headshot of Abby Wertz" />
+              <h3>Abby Wertz</h3>
+              <p class="role">Mentor Secretary</p>
+              <!-- <p class="bio"></p> -->
+            </article>
+          </div>
+
+          <!-- Row 5: Equipment Secretary (2) -->
+          <div class="team-row team-row--2">
+            <article class="team-card">
+              <img src="../images/anay.jpeg" alt="Headshot of Anay Patel" />
+              <h3>Anay Patel</h3>
+              <p class="role">Equiptment Secretary</p>
+              <p class="bio">Community &amp; events</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Social & Recruitment Chair" />
+              <h3>Taylor Kim</h3>
+              <p class="role">Social &amp; Recruitment Chair</p>
+              <p class="bio">Outreach &amp; tabling</p>
+            </article>
+          </div>
+
+          <!-- Row 6: Social & Recruitment Chairs (2) -->
+          <div class="team-row team-row--2">
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Social & Recruitment Chair" />
+              <h3>Anay Patel</h3>
+              <p class="role">Social &amp; Recruitment Chair</p>
+              <p class="bio">Community &amp; events</p>
+            </article>
+
+            <article class="team-card">
+              <img src="../images/mascot.png" alt="Headshot of Social & Recruitment Chair" />
+              <h3>Taylor Kim</h3>
+              <p class="role">Social &amp; Recruitment Chair</p>
+              <p class="bio">Outreach &amp; tabling</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- Simple footer -->
+  <!-- Footer (EXACT structure as homepage) -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -183,21 +224,24 @@
         <span class="footer-logo">NEMO</span>
         <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
       </div>
+
       <nav class="footer-nav" aria-label="Footer">
         <ul>
-          <li><a href="#top">Top</a></li>
+          <li><a href="../index.html#top">Home</a></li>
           <li><a href="../index.html#mission">Mission</a></li>
-          <li><a href="../index.html#training">Training</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a href="../Events/events.html">Events</a></li>
+          <li><a href="../index.html#resources">Resources</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
         </ul>
       </nav>
+
       <div class="footer-actions">
         <a class="btn btn-outline btn-sm" href="../index.html#contact">Join / Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- If team.html is next to index.html, change to src="homepage.js" -->
+  <!-- JS -->
   <script src="../homepage.js" defer></script>
 </body>
 </html>

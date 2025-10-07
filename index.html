@@ -7,31 +7,20 @@
   <meta name="description" content="NEMO is Northwestern's Emergency Medical Organization—training, outreach, and leadership in campus and community emergency readiness." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="homepage.css" />
+  <!-- Optional: enable smooth anchor scrolling without editing your CSS file -->
   <style>
-    /* Shift hero text and buttons to the right */
-    .hero-text {
-      padding-left: 2rem;
-    }
-    
-    @media (max-width: 768px) {
-      .hero-text {
-        padding-left: 1rem;
-      }
-    }
-    
-    /* Move event card buttons down slightly without changing card size */
-    .event-card .btn {
-      margin-top: 1rem;
-    }
+    html:focus-within { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
+
+  <!-- Skip to content for accessibility -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
 
   <!-- Top: Sticky Navbar -->
   <header class="site-header" id="top" role="banner">
     <nav class="navbar container" aria-label="Primary">
       <div class="brand">
-        <!-- ✅ You can change the text "NEMO" if the org name changes -->
         <a href="#top" class="logo" aria-label="NEMO Home">NEMO</a>
       </div>
 
@@ -42,9 +31,6 @@
         <span class="nav-toggle-bar"></span>
       </button>
 
-      <!-- ✅ Edit <a> text to rename nav links
-           ✅ Update href="#..." to change where the link points
-           ✅ Add/remove <li> to add or delete a navigation item -->
       <ul class="nav-links" id="primaryNav" role="menubar">
         <li role="none"><a role="menuitem" href="#about">About Us</a></li>
         <li role="none"><a role="menuitem" href="#mission">Our Mission</a></li>
@@ -53,6 +39,7 @@
         <li role="none"><a role="menuitem" href="Team/team.html">Team</a></li>
         <li role="none"><a role="menuitem" href="#resources">Resources</a></li>
         <li role="none"><a role="menuitem" href="#faq">FAQ</a></li>
+        <!-- FIX: contact link points to the contact section id -->
         <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -60,110 +47,99 @@
     <!-- News / Updates Banner -->
     <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
       <div class="news-marquee container">
-        <!-- ✅ Edit text inside <p>
-             ✅ Replace href="#" with actual registration/event link -->
         <p>
-		 <br> <strong>📅 Upcoming:</strong> Info Session • Oct 8 @ 7:00 PM •
+          <strong>📅 Upcoming:</strong> Info Session • Oct 8 @ 7:00 PM •
           <a href="#events" class="banner-link">Join here →</a>
-          <strong>🚨 Don't Forget!:</strong> Applications due • Oct 12 @ 11:59pm •
+          <strong>🚨 Don't Forget!:</strong> Applications due • Oct 12 @ Midnight •
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_6FbbIqfKuDitq_y510OKZGmBkIlXNbGVqUie_57GuXtlQg/viewform" class="banner-link">Register here →</a>
-		
         </p>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero container" id="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <!-- ✅ Edit main heading and slogan text -->
-        <h1>Northwestern Emergency Medical Organization</h1>
-        <p class="slogan">Northwestern’s Student EMTs — Trained to Respond, Ready to Lead.</p>
-        <div class="hero-ctas">
-          <!-- ✅ Change button text or href to update call-to-actions -->
-          <a class="btn btn-primary" href="#contact">Join Us</a>
-          <a class="btn btn-outline" href="#about">Learn More</a>
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero container" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Northwestern Emergency Medical Organization</h1>
+          <p class="slogan">Northwestern’s Student EMTs — Trained to Respond, Ready to Lead.</p>
+          <div class="hero-ctas">
+            <!-- FIX: this already scrolled; keeping consistent with #contact id -->
+            <a class="btn btn-primary" href="#contact">Join Us</a>
+            <a class="btn btn-outline" href="#about">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <figure class="mascot-wrap" aria-label="NEMO mascot">
+            <img src="images/mascot.png" alt="NEMO fish mascot placeholder" class="mascot mascot--hero" />
+            <figcaption>Nathan the Camel</figcaption>
+          </figure>
         </div>
       </div>
-      <div class="hero-art">
-        <!-- Fish mascot placeholder -->
-        <!-- ✅ Replace image src with new mascot graphic -->
-        <figure class="mascot-wrap" aria-label="NEMO mascot">
-          <img src="images/mascot.png" alt="NEMO fish mascot placeholder" class="mascot mascot--hero" />
-          <!-- ✅ Change caption text -->
-          <figcaption>Nathan the Fish</figcaption>
-        </figure>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About Us</h2>
+          <p class="section-subtitle">Who we are, what we do, and why it matters.</p>
+        </div>
+
+        <div class="about-grid">
+          <p>
+            NEMO (Northwestern Emergency Medical Organization) is a student-run organization dedicated to promoting awareness of emergency medicine and building a campus culture of readiness. Our mission is to equip Northwestern students with the knowledge, confidence, and certifications needed to respond effectively in a medical emergency.
+          </p>
+
+          <ul class="about-points">
+            <li><strong>Hands-On Training:</strong> EMT-B licensing courses, CPR/AED, and First Aid workshops led by certified instructors.</li>
+            <li><strong>Campus &amp; Community Outreach:</strong> Safety education events and volunteer service across Northwestern and Evanston.</li>
+            <li><strong>Leadership &amp; Mentorship:</strong> Members gain experience in peer education, leadership, and teamwork in high-stakes environments.</li>
+          </ul>
+
+          <p>
+            Together, we aim to strengthen preparedness across campus and inspire future leaders in healthcare and emergency response.
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <main id="main">
-  <!-- About Us -->
-  <section id="about" class="section about">
-    <div class="container">
-      <div class="section-head">
-        <h2>About Us</h2>
-        <p class="section-subtitle">Who we are, what we do, and why it matters.</p>
+    <!-- Our Mission -->
+    <section id="mission" class="section mission section--alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Our Mission</h2>
+          <p class="section-subtitle">Northwestern’s Student EMTs — Trained to Respond, Ready to Lead.</p>
+        </div>
+
+        <div class="pillars">
+          <article class="pillar">
+            <h3>Training</h3>
+            <p>
+              We equip students with practical lifesaving skills through EMT-B certification, CPR/AED courses, and hands-on medical training.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <h3>Outreach</h3>
+            <p>
+              NEMO partners with the Northwestern and Evanston communities to promote emergency preparedness through volunteer service and education.
+            </p>
+          </article>
+
+          <article class="pillar">
+            <h3>Leadership</h3>
+            <p>
+              We develop future healthcare leaders by providing mentorship, teamwork, and real-world experience in service and response.
+            </p>
+          </article>
+        </div>
+
+        <!-- Small mascot sprinkle -->
+        <img src="assets/mascot-placeholder.png" alt="" class="mascot mascot--tiny" aria-hidden="true" />
       </div>
-
-      <div class="about-grid">
-        <p>
-          NEMO (Northwestern Emergency Medical Organization) is a student-run organization dedicated to promoting awareness of emergency medicine and building a campus culture of readiness. Our mission is to equip Northwestern students with the knowledge, confidence, and certifications needed to respond effectively in a medical emergency.
-        </p>
-
-        <ul class="about-points">
-          <li><strong>Hands-On Training:</strong> EMT-B licensing courses, CPR/AED, Narcan, Stop the Bleed, and First Aid workshops led by certified instructors.</li>
-          <li><strong>Campus & Community Outreach:</strong> Safety education events and volunteer service across Northwestern and Evanston.</li>
-          <li><strong>Leadership & Mentorship:</strong> Members gain experience in peer education, leadership, and teamwork in high-stakes environments.</li>
-        </ul>
-
-        <p>
-          Together, we aim to strengthen preparedness across campus and inspire future leaders in healthcare and emergency response.
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-<!-- Our Mission -->
-<section id="mission" class="section mission section--alt">
-  <div class="container">
-    <div class="section-head">
-      <h2>Our Mission</h2>
-      <p class="section-subtitle">Northwestern’s Student EMTs — Trained to Respond, Ready to Lead.</p>
-    </div>
-
-    <div class="pillars">
-      <article class="pillar">
-        <h3>Training</h3>
-        <p>
-          We equip students with practical lifesaving skills through EMT-B certification, CPR/AED courses, and hands-on medical training.
-        </p>
-      </article>
-
-      <article class="pillar">
-        <h3>Outreach</h3>
-        <p>
-          NEMO partners with the Northwestern and Evanston communities to promote emergency preparedness through volunteer service and education.
-        </p>
-      </article>
-
-      <article class="pillar">
-        <h3>Leadership</h3>
-        <p>
-          We develop future healthcare leaders by providing mentorship, teamwork, and real-world experience in service and response.
-        </p>
-      </article>
-    </div>
-
-    <!-- Small mascot sprinkle -->
-    <img src="assets/mascot-placeholder.png" alt="" class="mascot mascot--tiny" aria-hidden="true" />
-  </div>
-</section>
-
-
+    </section>
 
     <!-- Impact / Stats -->
     <section id="impact" class="section impact">
@@ -173,8 +149,6 @@
           <p class="section-subtitle">What we’ve achieved together.</p>
         </div>
         <div class="stats">
-          <!-- ✅ Edit numbers and labels
-               ✅ Add/remove entire <div class="stat"> to update stats -->
           <div class="stat">
             <div class="stat-number">300+</div>
             <div class="stat-label">Students trained</div>
@@ -199,10 +173,7 @@
           <p class="section-subtitle">What’s happening next.</p>
         </div>
         <div class="event-grid">
-          <!-- ✅ Each <article class="event-card"> is one event.
-               ✅ Edit <h3>, <p>, and button link/text.
-               ✅ Add/remove <article class="event-card"> to update events list -->
-		  <article class="event-card">
+          <article class="event-card">
             <h3>Application Deadline</h3>
             <p>Date: Oct 12 • 11:59 PM</p>
             <p>Location: Google Form</p>
@@ -214,7 +185,8 @@
             <p>Location: Zoom</p>
             <a href="https://northwestern.zoom.us/j/92196297894" class="btn btn-sm btn-primary">Join</a>
           </article>
-			 <article class="event-card">
+          <article class="event-card">
+            <!-- FIX: typo "Formm" -> "Form" -->
             <h3>Mentor Interest Form</h3>
             <p>Date: TBD</p>
             <p>Location: Google Form</p>
@@ -222,7 +194,6 @@
           </article>
         </div>
         <div class="section-cta">
-          <!-- ✅ Update link or button text -->
           <a href="https://calendar.google.com/calendar/embed?src=nemo%40u.northwestern.edu&ctz=America%2FChicago" class="btn btn-outline">View Full Calendar</a>
         </div>
       </div>
@@ -236,9 +207,6 @@
           <p class="section-subtitle">Training, service, and leadership tracks.</p>
         </div>
         <div class="cards">
-          <!-- ✅ Each <article class="card"> is a training type.
-               ✅ Edit <h3> and <p> text.
-               ✅ Add/remove <article class="card"> to expand/shrink list -->
           <article class="card">
             <h3>Training Sessions</h3>
             <p>Hands-on CPR/AED and First Aid skill-building led by peers.</p>
@@ -263,29 +231,26 @@
           <p class="section-subtitle">Training, outreach, and campus life.</p>
         </div>
 
-        <!-- ✅ Replace <img> src and alt text with new photos
-             ✅ Add/remove <figure class="slide"> to change carousel images -->
         <div class="carousel" data-autoplay="true" data-interval="5000" aria-roledescription="carousel">
           <div class="carousel-track" aria-live="off">
-            <figure class="slide is-active">
+            <!-- FIX: give slides ids that match dots aria-controls -->
+            <figure class="slide is-active" id="slide-1">
               <img src="images/mci1.jpeg" alt="Hands-on CPR training session" />
               <figcaption>Hands-on training</figcaption>
             </figure>
-            <figure class="slide">
+            <figure class="slide" id="slide-2">
               <img src="images/logo.png" alt="Community outreach booth at student fair" />
               <figcaption>Community outreach</figcaption>
             </figure>
-            <figure class="slide">
+            <figure class="slide" id="slide-3">
               <img src="images/mascot.png" alt="Emergency drill night" />
               <figcaption>Drill night</figcaption>
             </figure>
           </div>
 
-          <!-- ✅ Navigation buttons (safe to leave as is) -->
           <button class="carousel-btn prev" aria-label="Previous slide" data-action="prev">‹</button>
           <button class="carousel-btn next" aria-label="Next slide" data-action="next">›</button>
 
-          <!-- ✅ Carousel dots: auto-linked to slides above -->
           <div class="carousel-dots" role="tablist" aria-label="Choose slide">
             <button class="dot is-active" role="tab" aria-selected="true" aria-controls="slide-1" data-slide="0">
               <span class="visually-hidden">Slide 1</span>
@@ -301,8 +266,6 @@
       </div>
     </section>
 
-    
-
     <!-- Resources / Links -->
     <section id="resources" class="section resources">
       <div class="container">
@@ -311,25 +274,26 @@
           <p class="section-subtitle">Explore partners, guides, and socials.</p>
         </div>
         <div class="link-grid">
-          <!-- ✅ Each <a class="link-card"> is a resource card.
-               ✅ Replace href with actual URL.
-               ✅ Change <h3> and <p> text.
-               ✅ Add/remove <a class="link-card"> to update resources -->
-          <a class="link-card" href="#" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
+          <!-- FIX: use real links you already provided below -->
+          <a class="link-card" href="https://www.instagram.com/nemo.northwestern?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
             <h3>Instagram</h3>
-            <p>Follow our journey and events.</p>
+            <p>Don't miss an update! Follow our journey and events.</p>
           </a>
-          <a class="link-card" href="" target="_blank" rel="noopener noreferrer">
+			<a class="link-card" href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer" aria-label="Join our Slack">
+            <h3>Listserv</h3>
+            <p>Hear about all our opportunities! Join the listserv.</p>
+          </a>
+          <a class="link-card" href="#" target="_blank" rel="noopener noreferrer" aria-label="CatsOnCampus">
             <h3>CatsOnCampus</h3>
             <p>Partner org &amp; campus collaboration.</p>
           </a>
-          <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
-            <h3>Red Cross</h3>
-            <p>CPR/AED &amp; First Aid certification info.</p>
+          <a class="link-card" href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer" aria-label="Join our Slack">
+            <h3>Slack</h3>
+            <p>Join our Slack to stay in touch.</p>
           </a>
-          <a class="link-card" href="#" target="_blank" rel="noopener noreferrer">
-            <h3>NU Student Orgs</h3>
-            <p>Find NEMO on the student org hub.</p>
+          <a class="link-card" href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer" aria-label="Join our Slack">
+            <h3>Mentor Form</h3>
+            <p>Join our Slack to stay in touch.</p>
           </a>
         </div>
       </div>
@@ -343,11 +307,6 @@
           <p class="section-subtitle">Everything you need to know to get started.</p>
         </div>
 
-        <!-- Accordion structure (functionality via homepage.js) -->
-        <!-- ✅ Each <article class="accordion-item"> is one FAQ.
-             ✅ Change button text for the question.
-             ✅ Replace <p> text with the answer.
-             ✅ Add/remove <article class="accordion-item"> to update FAQ list -->
         <div class="accordion" role="tablist">
           <article class="accordion-item">
             <h3>
@@ -356,91 +315,98 @@
               </button>
             </h3>
             <div id="faq1" class="accordion-panel" role="region" aria-labelledby="faq1-btn" hidden>
-                           <p>Fill out our application form, then attend an intro meeting or training to get plugged in. If you are already a certified EMT, fill out our mentor interest form. <br> Don't miss out on volunteer events, clinical hours, and experience: Join the listserv! </p>
+              <p><strong>Don't miss out on volunteer events, clinical hours, and valuable experience:</strong> Join the listserv! <br> <strong>If you are new to NEMO</strong>, fill out our application form, then attend an intro meeting or training to get plugged in. <strong><br>If you are already a certified EMT</strong>, fill out our mentor interest form.</p>
             </div>
           </article>
 
           <article class="accordion-item">
             <h3>
               <button class="accordion-trigger" aria-expanded="false" aria-controls="faq2" id="faq2-btn">
-                (Placeholder) Do I need to be an EMT?
+                Do I need to be an EMT already to join?
               </button>
             </h3>
             <div id="faq2" class="accordion-panel" role="region" aria-labelledby="faq2-btn" hidden>
-              <p>No. All majors and experience levels are welcome. We’ll teach you the basics.</p>
+              <p><strong>No experience? No problem.</strong> Students from all majors are welcome — the EMT-B course teaches you everything from the ground up. Don’t miss the chance to gain clinical skills and patient care experience that most students only get years later.</p>
             </div>
           </article>
 
           <article class="accordion-item">
             <h3>
               <button class="accordion-trigger" aria-expanded="false" aria-controls="faq3" id="faq3-btn">
-                (Placeholder) What’s the time commitment?
+                What’s the time commitment?
               </button>
             </h3>
             <div id="faq3" class="accordion-panel" role="region" aria-labelledby="faq3-btn" hidden>
-              <p>Typically 1–3 hrs/week depending on role and event schedules. It’s flexible.</p>
+              <p>
+                <strong>After acceptance into the EMT-B course</strong>, classes meet just twice a week — Tuesday evenings (7–10 PM) and Sunday mornings (10 AM–2 PM) — designed to fit around busy student schedules. These sessions are engaging, hands-on, and focused on real clinical scenarios, so every hour feels meaningful.
+                <br> <strong>After becoming certified</strong>, most members find the time commitment easy to manage — typically just 1–3 hours per week. The schedule is flexible, so you can balance it with classes, shifts, and other commitments while gaining real-world experience that stands out on applications.
+                <br> <strong>Many EMTs like to stay involved</strong> because opportunities like this don’t come around often — a small weekly commitment can make a big difference in your clinical confidence, leadership experience, and future in healthcare!
+              </p>
             </div>
           </article>
 
           <article class="accordion-item">
             <h3>
               <button class="accordion-trigger" aria-expanded="false" aria-controls="faq4" id="faq4-btn">
-                (Placeholder) How do I stay updated?
+                How do I stay updated?
               </button>
             </h3>
             <div id="faq4" class="accordion-panel" role="region" aria-labelledby="faq4-btn" hidden>
-              <p>Follow us on Instagram and join our mailing list for training dates and outreach events.</p>
+              <p>Follow us on Instagram, join our Slack, and sign up for the listserv to ensure you never miss an update or clinical opportunity!</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-		<!-- Contact -->
-	
-	<form
-	  class="contact-form"
-	  action="https://formspree.io/f/mqayldyz"
-	  method="POST">
-	  <h2 class="contact-title">Contact NEMO</h2>
-	  <p class="contact-intro">
-		Have a question about training, events, or membership? Send us a message below — we’ll get back to you as soon as possible.
-	  </p>
+    <!-- Contact -->
+    <!-- FIX: wrap contact in its own section with id="contact" so all "Contact" buttons/links scroll here -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/mqayldyz"
+          method="POST"
+        >
+          <h2 class="contact-title">Contact NEMO</h2>
+          <p class="contact-intro">
+            Have a question about training, events, or membership? Send us a message below — we’ll get back to you as soon as possible.
+          </p>
 
-	  <div class="form-row">
-		<label for="name">Full Name</label>
-		<input id="name" name="name" type="text" placeholder="Your full name" required />
-	  </div>
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Your full name" required />
+          </div>
 
-	  <div class="form-row">
-		<label for="email">Email Address</label>
-		<input id="email" name="email" type="email" placeholder="you@northwestern.edu" required />
-	  </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="you@northwestern.edu" required />
+          </div>
 
-	  <div class="form-row">
-		<label for="subject">Subject</label>
-		<input id="subject" name="subject" type="text" placeholder="Topic or reason for contacting" />
-	  </div>
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Topic or reason for contacting" />
+          </div>
 
-	  <div class="form-row">
-		<label for="message">Message</label>
-		<textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
-	  </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+          </div>
 
-	  <!-- Optional hidden fields -->
-	  <input type="hidden" name="_subject" value="New message from NEMO Contact Form" />
-	  <input type="hidden" name="_captcha" value="false" />
-	  <input type="hidden" name="_next" value="https://nemo-northwestern.org/thanks.html" />
+          <!-- Optional hidden fields -->
+          <input type="hidden" name="_subject" value="New message from NEMO Contact Form" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://nemo-northwestern.org/thanks.html" />
 
-	  <!-- Anti-spam honeypot -->
-	  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+          <!-- Anti-spam honeypot -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
 
-	  <button type="submit" class="btn btn-primary">Send Message</button>
+          <button type="submit" class="btn btn-primary">Send Message</button>
 
-	  <p class="form-note">We typically reply within 1–2 business days.</p>
-	</form>
+          <p class="form-note">We typically reply within 1–2 business days.</p>
+        </form>
 
-        <!-- ✅ Update links or add new ones to change contact/social options -->
+        <!-- Contact / Socials -->
         <div class="contact-socials">
           <a href="https://www.instagram.com/nemo.northwestern?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://nemo-6fg9047.slack.com/join/shared_invite/zt-3dhhgals4-zE1D2sbkIQrKL4HW3XA2sw#/shared-invite" target="_blank" rel="noopener noreferrer">Slack</a>
@@ -448,20 +414,34 @@
         </div>
       </div>
     </section>
+
+    <!-- Decorative mascot row at bottom -->
+    <div class="mascot-row" aria-hidden="true">
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+      <img src="images/mascot.png" alt="" class="mascot mascot--float-1" />
+    </div>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <!-- ✅ Replace mascot img or footer logo text -->
         <img src="assets/mascot-placeholder.png" alt="" class="mascot mascot--footer" aria-hidden="true" />
         <span class="footer-logo">NEMO</span>
-        <!-- ✅ The <span id="year"> auto-updates via JS -->
         <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
       </div>
 
-      <!-- ✅ Add/remove footer links inside <li> -->
       <nav class="footer-nav" aria-label="Footer">
         <ul>
           <li><a href="#top">Home</a></li>
@@ -472,22 +452,15 @@
         </ul>
       </nav>
 
-      <!-- ✅ You can change button text and href -->
       <div class="footer-actions">
+        <!-- FIX: anchor points to #contact -->
         <a class="btn btn-outline btn-sm" href="#contact">Join / Contact</a>
       </div>
     </div>
   </footer>
 
-  <!-- Decorative floating mascot sprinkles -->
-  <!-- ✅ Replace mascot images or delete if you don’t want floating graphics -->
-  <img src="images/mascot.placeholder" class="mascot mascot--float-1" alt="" aria-hidden="true" />
-  <img src="images/mascot.placeholder" class="mascot mascot--float-2" alt="" aria-hidden="true" />
-
   <!-- JS -->
-  <!-- ✅ Keep this linked so navbar, FAQ accordion, and carousel work -->
+  <!-- Keep this linked so navbar, FAQ accordion, and carousel work -->
   <script src="homepage.js" defer></script>
 </body>
 </html>
-
-

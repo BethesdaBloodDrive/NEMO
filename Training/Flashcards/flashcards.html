@@ -1,77 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards - EMT eLearning</title>
-    <link rel="stylesheet" href="flashcards-styles.css">
-    <script defer src="flashcards-scripts.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEMO • EMT Flashcards</title>
+
+  <!-- Base site styles (match index.html exactly) -->
+  <link rel="stylesheet" href="../../homepage.css" />
+
+  <!-- Page-specific styles (you'll customize next) -->
+  <link rel="stylesheet" href="flashcards-styles.css" />
+
+  <!-- Scripts -->
+  <script defer src="../../homepage.js"></script>
+  <script defer src="flashcards-scripts.js"></script>
+
+  <!-- Smooth anchor scroll like index.html -->
+  <style>html:focus-within{scroll-behavior:smooth}</style>
 </head>
+
 <body>
-    <header>
-        <div class="logo">
-            <h1>EMT Flashcards</h1>
+  <!-- Skip to content for accessibility -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
+
+  <!-- Top: Sticky Navbar (IDENTICAL structure/classes to index.html) -->
+  <header class="site-header" id="top" role="banner">
+    <nav class="navbar container" aria-label="Primary">
+      <div class="brand">
+        <a href="../../index.html#top" class="logo" aria-label="NEMO Home">NEMO</a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="primaryNav" role="menubar">
+        <li role="none"><a role="menuitem" href="../../index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="../../index.html#about">About Us</a></li>
+        <li role="none"><a role="menuitem" href="../../index.html#mission">Our Mission</a></li>
+        <li role="none"><a role="menuitem" href="../../Events/events.html">Events</a></li>
+        <li role="none"><a role="menuitem" href="../traininghomepage.html">Training</a></li>
+        <li role="none"><a role="menuitem" href="../../Team/team.html">Team</a></li>
+        <li role="none"><a role="menuitem" href="../../index.html#resources">Resources</a></li>
+        <li role="none"><a role="menuitem" href="../../index.html#faq">FAQ</a></li>
+        <li role="none"><a role="menuitem" href="../../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- News / Updates Banner (same pattern as index/training) -->
+    <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
+      <div class="news-marquee container">
+        <p>
+          <strong>📚 Training Portal:</strong> Access all your NEMO training resources •
+          <a href="../traininghomepage.html#links" class="banner-link">Explore modules →</a>
+          <strong>🎓 Get Certified:</strong> CPR/AED Resources •
+          <a href="https://www.redcross.org/take-a-class/cpr" class="banner-link" target="_blank" rel="noopener noreferrer">Learn more →</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Hero (use site hero styling for consistency) -->
+    <section class="hero container" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>EMT Flashcards</h1>
+          <p class="slogan">Study decks for Trauma Decision Trees, BLS Pharmacology, and more.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#flashcard-decks">Browse Decks</a>
+            <a class="btn btn-outline" href="../traininghomepage.html#links">Back to Training</a>
+          </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="traininghomepage.html">Home</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <!-- Search Bar -->
-        <section id="search-bar">
-            <input type="text" id="deck-search" placeholder="🔍 Search Flashcard Decks...">
-        </section>
-
-        <!-- Flashcard Decks -->
-        <section id="flashcard-decks">
-            <h2>Flashcard Decks</h2>
-            <div class="deck-list">
-                <div class="deck" data-name="Trauma">
-                    <h3>Trauma Decision Tree</h3>
-                    <button class="view-deck-btn" data-deck="trauma">View Deck</button>
-                </div>
-                <div class="deck" data-name="Pharmacology">
-                    <h3>BLS Pharmacology</h3>
-                    <button class="view-deck-btn" data-deck="pharmacology">View Deck</button>
-                </div>
-	
-				<div class="deck" data-name="illnesses">
-                    <h3>Illnesses</h3>
-                    <button class="view-deck-btn" data-deck="illnesses">View Deck</button>
-                </div>
-
-				
-            </div>
-        </section>
-
-        <!-- Flashcard Modal -->
-        <div id="flashcard-modal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close-btn">&times;</span>
-                <div class="flashcard">
-                    <div class="card-content front">
-                        <p></p>
-                    </div>
-                    <div class="card-content back">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card-controls">
-    				<button id="prev-card">← Previous</button>
-<button id="shuffle-deck">Shuffle</button>
-    				<button id="next-card">Next →</button>
-				</div>
-				
-            </div>
+        <div class="hero-art">
+          <figure class="mascot-wrap" aria-label="NEMO mascot">
+            <img src="../../images/mascot.png" alt="NEMO mascot" class="mascot mascot--hero" />
+            <figcaption>Nathan the Camel</figcaption>
+          </figure>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <footer>
-        <p>&copy; All Rights Reserved.</p>
-    </footer>
+    <!-- Search Bar -->
+    <section id="search-bar" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Search Flashcard Decks</h2>
+          <p class="section-subtitle">Find a topic fast—filter by deck name.</p>
+        </div>
+        <div class="card-container" style="grid-template-columns:1fr;max-width:700px;margin:0 auto;">
+          <div class="card">
+            <label for="deck-search" class="visually-hidden">Search decks</label>
+            <input type="text" id="deck-search" placeholder="🔍 Search Flashcard Decks..." aria-label="Search flashcard decks" style="width:100%;padding:.9rem 1rem;border-radius:12px;border:2px solid var(--soft-blue);" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flashcard Decks -->
+    <section id="flashcard-decks" class="section resources">
+      <div class="container">
+        <div class="section-head">
+          <h2>Flashcard Decks</h2>
+          <p class="section-subtitle">Choose a deck to start practicing.</p>
+        </div>
+
+        <div class="card-container deck-list">
+          <!-- Deck: Trauma -->
+          <article class="card deck" data-name="Trauma">
+            <h3>Trauma Decision Tree</h3>
+            <button class="btn btn-primary btn-sm view-deck-btn" data-deck="trauma" aria-label="Open Trauma Decision Tree deck">View Deck</button>
+          </article>
+
+          <!-- Deck: Pharmacology -->
+          <article class="card deck" data-name="Pharmacology">
+            <h3>BLS Pharmacology</h3>
+            <button class="btn btn-primary btn-sm view-deck-btn" data-deck="pharmacology" aria-label="Open BLS Pharmacology deck">View Deck</button>
+          </article>
+
+          <!-- Deck: Illnesses -->
+          <article class="card deck" data-name="illnesses">
+            <h3>Illnesses</h3>
+            <button class="btn btn-primary btn-sm view-deck-btn" data-deck="illnesses" aria-label="Open Illnesses deck">View Deck</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flashcard Modal -->
+    <section aria-live="polite">
+      <div id="flashcard-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="flashcardModalTitle">
+        <div class="modal-content">
+          <button class="close-btn" aria-label="Close flashcards">&times;</button>
+
+          <h2 id="flashcardModalTitle" class="visually-hidden">Flashcards</h2>
+
+          <div class="flashcard" tabindex="0" aria-roledescription="flashcard">
+            <div class="card-content front" aria-label="Front of card">
+              <p></p>
+            </div>
+            <div class="card-content back" aria-label="Back of card" hidden>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="card-controls" style="display:flex;gap:.75rem;justify-content:center;margin-top:1rem;">
+            <button id="prev-card" class="btn btn-outline btn-sm" aria-label="Previous card">← Previous</button>
+            <button id="shuffle-deck" class="btn btn-primary btn-sm" aria-label="Shuffle deck">Shuffle</button>
+            <button id="next-card" class="btn btn-outline btn-sm" aria-label="Next card">Next →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (IDENTICAL structure to index.html; fix paths from /Training/Flashcards/) -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="../../assets/mascot-placeholder.png" alt="" class="mascot mascot--footer" aria-hidden="true" />
+        <span class="footer-logo">NEMO</span>
+        <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="../../index.html#top">Home</a></li>
+          <li><a href="../../index.html#mission">Mission</a></li>
+          <li><a href="../../Events/events.html">Events</a></li>
+          <li><a href="../traininghomepage.html">Training</a></li>
+          <li><a href="../../index.html#resources">Resources</a></li>
+          <li><a href="../../index.html#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-actions">
+        <a class="btn btn-outline btn-sm" href="../../index.html#contact">Join / Contact</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

@@ -943,6 +943,29 @@ a {
     width: 200px;
   }
 }
+/* ------------------------------------
+   Bottom Mascot Row
+------------------------------------ */
+.mascot-row {
+  text-align: center;          /* centers the mascots */
+  margin: 2rem 0 1rem;         /* spacing above/below the row */
+}
+
+.mascot-row .mascot--float-1 {
+  display: inline-block;       /* allows them to sit side by side */
+  width: 70px;                 /* adjust size as needed */
+  height: auto;
+  margin: 0 10px;              /* space between mascots */
+  vertical-align: middle;
+  animation: float 4s ease-in-out infinite; /* optional floating effect */
+}
+
+/* optional subtle hover animation for fun */
+.mascot-row .mascot--float-1:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 
 @media (max-width: 600px) {
   .hero-text h1 {

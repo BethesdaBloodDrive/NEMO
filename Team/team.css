@@ -1,5 +1,5 @@
 /* ------------------------------------
-   NEMO • TEAMS.CSS (Team page)
+   NEMO • TEAM.CSS (Unified with Homepage)
 ------------------------------------ */
 
 /* Fonts & Root Vars */
@@ -37,29 +37,53 @@ a { text-decoration: none; color: inherit; }
 /* Utility */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
 .section { padding: 4rem 1rem; }
+.section--alt { background: var(--cream); }
 .section-head { text-align: center; margin-bottom: 2.5rem; }
 .section-head h2 { font-size: 2rem; margin-bottom: 0.5rem; }
 .section-subtitle { font-size: 1.1rem; color: #444; }
 
 /* ------------------------------------
-   Navbar (simple)
+   Navbar (identical to homepage)
 ------------------------------------ */
 .site-header {
   position: sticky; top: 0; z-index: 1000;
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-.navbar { display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; }
-.logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.5rem; color: var(--purple); }
-
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--purple);
+}
 .nav-links { list-style: none; display: flex; gap: 1.5rem; }
 .nav-links a { position: relative; font-weight: 500; transition: color .3s ease; }
-.nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--bright-blue); transition: width .3s ease; }
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 2px;
+  background: var(--bright-blue);
+  transition: width .3s ease;
+}
 .nav-links a:hover { color: var(--bright-blue); }
 .nav-links a:hover::after { width: 100%; }
 
-.nav-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
-.nav-toggle-bar { width: 25px; height: 3px; background: var(--purple); border-radius: 2px; }
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
+}
+.nav-toggle-bar {
+  width: 25px; height: 3px;
+  background: var(--purple);
+  border-radius: 2px;
+}
 
 @media (max-width: 900px) {
   .nav-links {
@@ -72,79 +96,197 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ------------------------------------
-   Team Layout
+   News Banner (homepage match)
+------------------------------------ */
+.news-banner {
+  background: var(--bright-blue);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.banner-link {
+  color: var(--cream);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ------------------------------------
+   HERO — exact same as homepage
+------------------------------------ */
+.hero {
+  background: linear-gradient(135deg, var(--purple), var(--bright-blue));
+  color: var(--white);
+  padding: 5rem 1rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.08);
+  letter-spacing: 0.3px;
+}
+
+.slogan {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: var(--cream);
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-art {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.mascot {
+  width: 200px;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@media (max-width: 900px) {
+  .hero-content { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 { font-size: 1.8rem; }
+  .btn { padding: 0.6rem 1.2rem; }
+}
+
+/* ------------------------------------
+   Buttons (consistent with homepage)
+------------------------------------ */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background: var(--bright-blue);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+.btn-outline {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--purple);
+}
+.btn-sm { padding: 0.5rem 1rem; font-size: 0.9rem; }
+
+/* ------------------------------------
+   Team Layout (cards with fixed height)
 ------------------------------------ */
 .team-rows { display: flex; flex-direction: column; gap: 2.25rem; }
 .team-row { display: grid; gap: 1.75rem; justify-items: center; }
 .team-row--1 { grid-template-columns: 1fr; justify-content: center; }
-.team-row--2 { grid-template-columns: repeat(2, minmax(200px, 1fr)); }
-.team-row--3 { grid-template-columns: repeat(3, minmax(200px, 1fr)); }
+.team-row--2 { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+.team-row--3 { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
 
-/* --- Uniform Team Cards (fixed height; inner margins normalized) --- */
 .team-card {
+  position: relative;
   background: var(--white);
   border-radius: 1rem;
   text-align: center;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   transition: transform .25s ease, box-shadow .25s ease;
-
-  /* FIXED footprint so shadows never vary */
-  height: 420px;          /* desktop */
+  height: 420px;
   overflow: hidden;
-
-  /* Grid layout inside card: image / name / role / bio */
   display: grid;
   grid-template-rows: auto auto auto 1fr;
   align-items: start;
   padding: 1.25rem 1.25rem 1.5rem;
 }
 
-/* Normalize inner margins so text can’t change outer height */
-.team-card h3,
-.team-card p { margin: 0; }
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--bright-blue), var(--soft-blue));
+}
 
-.team-card:hover { transform: translateY(-6px); box-shadow: 0 10px 26px rgba(0,0,0,0.12); }
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
 
-/* --- Square Headshots --- */
 .team-card img {
   width: 200px; height: 200px;
-  border-radius: 10px;     /* set to 0 for hard corners */
+  border-radius: 12px;
   object-fit: cover;
   justify-self: center;
-  margin-bottom: 0.9rem;
+  margin-top: .5rem;
+  margin-bottom: .9rem;
   transition: box-shadow .25s ease, transform .25s ease;
 }
-.team-card img:hover { box-shadow: 0 0 18px var(--soft-blue); }
+.team-card img:hover {
+  box-shadow: 0 0 18px rgba(115,197,232,0.55);
+  transform: translateY(-2px);
+}
 
-/* --- Text --- */
+.team-card h3, .team-card p { margin: 0; }
 .team-card h3 {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   line-height: 1.25;
-  min-height: 1.25em;      /* reserve one line */
   margin-bottom: 0.25rem;
 }
 .role {
-  font-weight: 700; color: var(--bright-blue);
-  font-size: 0.95rem; line-height: 1.25;
-  min-height: 1.25em;      /* reserve one line */
+  font-weight: 700;
+  color: var(--bright-blue);
+  font-size: 0.96rem;
 }
 .team-card .bio {
-  font-size: 0.92rem; color: #333; margin-top: 0.35rem;
-
-  /* Clamp so long bios don’t force taller cards */
+  font-size: 0.92rem;
+  color: #333;
+  margin-top: 0.45rem;
   display: -webkit-box;
-  -webkit-line-clamp: 4;           /* adjust 3–5 lines if needed */
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 /* ------------------------------------
-   Responsive
+   Responsive Cards
 ------------------------------------ */
 @media (max-width: 1024px) {
   .team-row--3 { grid-template-columns: repeat(3, minmax(180px, 1fr)); }
   .team-card img { width: 180px; height: 180px; }
-  .team-card { height: 390px; }    /* fixed & equal on tablets */
+  .team-card { height: 390px; }
 }
 
 @media (max-width: 900px) {
@@ -156,16 +298,30 @@ a { text-decoration: none; color: inherit; }
     grid-template-columns: repeat(2, minmax(140px, 1fr));
   }
   .team-card img { width: 140px; height: 140px; }
-  .team-card { height: 340px; }    /* fixed & equal on phones */
+  .team-card { height: 340px; }
   .team-card .bio { -webkit-line-clamp: 3; }
 }
 
 /* ------------------------------------
-   Footer
+   Footer (identical to homepage)
 ------------------------------------ */
-.site-footer { background: var(--purple); color: var(--cream); padding: 2rem 1rem; }
-.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; align-items: center; }
-.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; }
+.site-footer {
+  background: var(--purple);
+  color: var(--cream);
+  padding: 2rem 1rem;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
 .footer-nav ul { list-style: none; display: flex; gap: 1rem; }
 .footer-nav a { color: var(--cream); transition: color .3s ease; }
 .footer-nav a:hover { color: var(--soft-blue); }
@@ -173,7 +329,7 @@ a { text-decoration: none; color: inherit; }
 .footer-actions .btn:hover { background: var(--cream); color: var(--purple); }
 
 /* ------------------------------------
-   Fade-in
+   Fade-in Animation
 ------------------------------------ */
 .section { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
 .section.visible { opacity: 1; transform: translateY(0); }

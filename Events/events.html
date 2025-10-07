@@ -2,54 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NEMO • Events</title>
   <link rel="stylesheet" href="../homepage.css" />
   <link rel="icon" href="../assets/favicon.png" />
+  <style>html:focus-within{scroll-behavior:smooth}</style>
 </head>
 
 <body>
-  <!-- Header / Navbar -->
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="logo" href="../index.html">NEMO</a>
+  <!-- Skip to content for accessibility -->
+  <a class="visually-hidden" href="#main">Skip to main content</a>
 
-      <nav aria-label="Primary">
-        <ul id="primaryNav" class="nav-links">
-          <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#mission">Our Mission</a></li>
-          <li><a href="events.html" aria-current="page">Events</a></li>
-          <li><a href="../index.html#training">Training</a></li>
-          <li><a href="../index.html#team">Team</a></li>
-          <li><a href="../resources.html">Resources</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <!-- Top: Sticky Navbar (identical to index.html, with Home added) -->
+  <header class="site-header" id="top" role="banner">
+    <nav class="navbar container" aria-label="Primary">
+      <div class="brand">
+        <a href="../index.html#top" class="logo" aria-label="NEMO Home">NEMO</a>
+      </div>
 
-      <button id="navToggle" class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <!-- Mobile menu button (hook for JS) -->
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
       </button>
+
+      <ul class="nav-links" id="primaryNav" role="menubar">
+        <li role="none"><a role="menuitem" href="../index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#about">About Us</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#mission">Our Mission</a></li>
+        <li role="none"><a role="menuitem" href="events.html" aria-current="page">Events</a></li>
+        <li role="none"><a role="menuitem" href="../Training/traininghomepage.html">Training</a></li>
+        <li role="none"><a role="menuitem" href="../Team/team.html">Team</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#resources">Resources</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#faq">FAQ</a></li>
+        <li role="none"><a role="menuitem" href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- News / Updates Banner (identical pattern) -->
+    <div class="news-banner" role="region" aria-label="News updates" aria-live="polite">
+      <div class="news-marquee container">
+        <p>
+          <strong>📅 Upcoming:</strong> Info Session • Oct 8 @ 7:00 PM •
+          <a href="../index.html#events" class="banner-link">Join here →</a>
+          <strong>🚨 Don't Forget!:</strong> Applications due • Oct 12 @ Midnight •
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_6FbbIqfKuDitq_y510OKZGmBkIlXNbGVqUie_57GuXtlQg/viewform" class="banner-link">Register here →</a>
+        </p>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero section">
-    <div class="container hero-content" style="justify-content:center;">
-      <div class="hero-text" style="text-align:center;">
-        <h1>Events</h1>
-        <p class="slogan">Stay up to date with upcoming NEMO trainings, info sessions, and volunteer opportunities.</p>
-        <div class="hero-ctas" style="justify-content:center;">
-          <a class="btn btn-primary" href="#upcoming">View Events</a>
-          <a class="btn btn-outline" href="../index.html#contact">Contact Us</a>
+  <main id="main" role="main">
+    <!-- Hero (same structure as index/training/flashcards) -->
+    <section class="hero container" id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Events</h1>
+          <p class="slogan">Stay up to date with upcoming NEMO trainings, info sessions, and volunteer opportunities.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#upcoming">View Events</a>
+            <a class="btn btn-outline" href="../index.html#contact">Contact Us</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <figure class="mascot-wrap" aria-label="NEMO mascot">
+            <img src="../images/mascot.png" alt="NEMO mascot" class="mascot mascot--hero" />
+            <figcaption>Nathan the Camel</figcaption>
+          </figure>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Upcoming Events Section -->
-  <main id="main">
+    <!-- Upcoming Events -->
     <section id="upcoming" class="section">
       <div class="container">
         <div class="section-head">
@@ -57,9 +82,7 @@
           <p class="section-subtitle">Join us for training, outreach, and service events throughout the semester.</p>
         </div>
 
-        <!-- Event Cards -->
         <div class="event-grid">
-          <!-- Example Event 1 -->
           <article class="event-card">
             <h3>🚨 Info Session: Become an EMT</h3>
             <p><strong>Date:</strong> October 8, 2025 @ 7:00 PM</p>
@@ -68,7 +91,6 @@
             <a href="https://forms.gle/XTxyKF4tkksAYKYu9" target="_blank" class="btn btn-primary btn-sm">Register</a>
           </article>
 
-          <!-- Example Event 2 -->
           <article class="event-card">
             <h3>❤️ CPR/AED Certification Workshop</h3>
             <p><strong>Date:</strong> October 20, 2025 @ 6:30 PM</p>
@@ -77,7 +99,6 @@
             <a href="#" class="btn btn-primary btn-sm">Sign Up</a>
           </article>
 
-          <!-- Example Event 3 -->
           <article class="event-card">
             <h3>🤝 Cultivate Food Rescue Volunteering</h3>
             <p><strong>Date:</strong> October 9, 2025 @ 6:00–7:30 PM</p>
@@ -86,7 +107,6 @@
             <a href="#" class="btn btn-primary btn-sm">Volunteer</a>
           </article>
 
-          <!-- Example Event 4 -->
           <article class="event-card">
             <h3>🩺 First Aid for Campus Safety</h3>
             <p><strong>Date:</strong> November 2, 2025 @ 5:00 PM</p>
@@ -96,14 +116,13 @@
           </article>
         </div>
 
-        <!-- Call to Action -->
         <div class="section-cta">
           <a href="https://calendar.google.com/calendar/u/0/r?cid=yourcalendarid" target="_blank" class="btn btn-outline">📅 View Full Calendar</a>
         </div>
       </div>
     </section>
 
-    <!-- Past Events (optional) -->
+    <!-- Past Events -->
     <section id="past" class="section section--alt">
       <div class="container">
         <div class="section-head">
@@ -131,28 +150,32 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
+  <!-- Footer (identical to index.html; fixed paths for /Events/) -->
+  <footer class="site-footer" role="contentinfo">
     <div class="container footer-grid">
-      <div class="footer-logo">NEMO</div>
-      <nav class="footer-nav">
+      <div class="footer-brand">
+        <img src="../assets/mascot-placeholder.png" alt="" class="mascot mascot--footer" aria-hidden="true" />
+        <span class="footer-logo">NEMO</span>
+        <p class="footer-copy">© <span id="year">2025</span> NEMO. All rights reserved.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
         <ul>
-          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#top">Home</a></li>
           <li><a href="../index.html#mission">Mission</a></li>
           <li><a href="events.html">Events</a></li>
-          <li><a href="../resources.html">Resources</a></li>
+          <li><a href="../index.html#resources">Resources</a></li>
+          <li><a href="../index.html#faq">FAQ</a></li>
         </ul>
       </nav>
+
       <div class="footer-actions">
-        <a class="btn btn-sm" href="../index.html#contact">Contact</a>
+        <a class="btn btn-outline btn-sm" href="../index.html#contact">Join / Contact</a>
       </div>
-    </div>
-    <div class="container" style="text-align:center; margin-top:1rem;">
-      <small>© <span id="year"></span> Northwestern Emergency Medical Organization</small>
     </div>
   </footer>
 
   <!-- JS -->
-  <script src="../homepage.js"></script>
+  <script src="../homepage.js" defer></script>
 </body>
 </html>

@@ -1,241 +1,296 @@
-/* General Styles */
+/* ------------------------------------------------------
+   NEMO • Flashcards Styles (standalone, matches homepage)
+   Fonts & Root Variables
+------------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;900&display=swap');
+
+:root {
+  --purple: #3B2E71;
+  --bright-blue: #73C5E8;
+  --soft-blue: #9CD7E7;
+  --cream: #FDF8DC;
+  --white: #FEFEFC;
+
+  --max-width: 1100px;
+}
+
+/* Reset / Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(120deg, #f0f4f7, #d9e7f5);
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--white);
+  color: var(--purple);
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+
+/* Utilities */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+.section { padding: 4rem 1rem; }
+.section--alt { background: var(--cream); }
+.section-head { text-align: center; margin-bottom: 2.5rem; }
+.section-head h2 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--purple); font-size: 2rem; margin-bottom: .5rem; }
+.section-subtitle { font-size: 1.1rem; color: #444; }
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0,0,0,0); border: 0;
 }
 
-/* Header */
-header {
-    background: linear-gradient(90deg, #4CAF50, #2E7D32);
-    color: #fff;
-    padding: 15px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+/* Headings */
+h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--purple); }
 
-header .logo h1 {
-    font-size: 2.8rem;
-    margin: 0;
+/* ------------------------------------------------------
+   Navbar (IDENTICAL scale to homepage)
+------------------------------------------------------ */
+.site-header {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--white);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1rem 0; /* exact match to homepage.css */
 }
-
-nav ul li {
-    margin: 0 15px;
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--purple);
 }
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s;
+.nav-links { list-style: none; display: flex; gap: 1.5rem; }
+.nav-links a {
+  position: relative; font-weight: 500; transition: color .3s ease;
 }
-
-nav ul li a:hover {
-    color: #c3e6cb;
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+  background: var(--bright-blue); transition: width .3s ease;
 }
+.nav-links a:hover { color: var(--bright-blue); }
+.nav-links a:hover::after { width: 100%; }
 
-/* Search Bar */
-#search-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+/* Mobile toggle */
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; cursor: pointer;
 }
+.nav-toggle-bar { width: 25px; height: 3px; background: var(--purple); border-radius: 2px; }
 
+/* ------------------------------------------------------
+   News Banner (same as homepage)
+------------------------------------------------------ */
+.news-banner {
+  background: var(--bright-blue);
+  color: var(--white);
+  padding: .25rem .5rem;
+  font-weight: 600;
+  font-size: .9rem;
+  text-align: center;
+}
+.banner-link { color: var(--cream); font-weight: 700; text-decoration: underline; }
+
+/* ------------------------------------------------------
+   Hero (same scale & spacing)
+------------------------------------------------------ */
+.hero {
+  background: linear-gradient(135deg, var(--purple), var(--bright-blue));
+  color: var(--white);
+  padding: 5rem 1rem;
+}
+.hero-content {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 3rem; flex-wrap: wrap;
+}
+.hero-text { flex: 1 1 400px; }
+.hero-text h1 {
+  font-size: 2.8rem; line-height: 1.2; margin-bottom: 1rem; color: var(--white);
+  text-shadow: 0 2px 12px rgba(0,0,0,.25);
+  -webkit-text-stroke: .5px rgba(0,0,0,.08);
+  letter-spacing: .3px;
+}
+.slogan { font-size: 1.25rem; margin-bottom: 2rem; color: var(--cream); }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-art { flex: 1 1 250px; text-align: center; }
+.mascot { width: 200px; animation: float 4s ease-in-out infinite; }
+@keyframes float { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-12px) } }
+
+/* Buttons (site-wide) */
+.btn {
+  display: inline-block; padding: .8rem 1.6rem;
+  border-radius: 2rem; font-weight: 600; transition: all .3s ease;
+}
+.btn-primary { background: var(--bright-blue); color: var(--white); box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+.btn-primary:hover { transform: scale(1.05); box-shadow: 0 6px 16px rgba(0,0,0,.3); }
+.btn-outline { border: 2px solid var(--white); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--purple); }
+.btn-sm { padding: .5rem 1rem; font-size: .9rem; }
+
+/* ------------------------------------------------------
+   Search Bar (styled to match cards)
+------------------------------------------------------ */
+#search-bar .card {
+  background: var(--white);
+  padding: 1.25rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 #deck-search {
-    width: 60%;
-    padding: 12px 15px;
-    font-size: 1.1rem;
-    border: 2px solid #4CAF50;
-    border-radius: 25px;
-    outline: none;
-    transition: all 0.3s;
+  width: 100%;
+  padding: .9rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--soft-blue);
+  border-radius: 12px;
+  outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease;
+  background: var(--white);
+  color: var(--purple);
 }
-
 #deck-search:focus {
-    border-color: #2E7D32;
-    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+  border-color: var(--bright-blue);
+  box-shadow: 0 0 0 4px rgba(115,197,232,0.2);
 }
 
-/* Deck List */
-.deck-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 20px;
-    justify-content: center;
-    width: 90%;
-    padding: 20px;
-    box-sizing: border-box;
+/* ------------------------------------------------------
+   Decks (use shared "card" look)
+------------------------------------------------------ */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
-
-.deck {
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
 }
+.card h3 { margin-bottom: .5rem; }
+.card .btn { margin-top: .5rem; }
+.card:hover { transform: translateY(-6px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
 
-.deck h3 {
-    font-size: 1.5rem;
-    color: #4CAF50;
-    margin-bottom: 15px;
+/* Map previous classes to new card look so your JS keeps working */
+.deck-list { /* wrapper already gets card-container from HTML */
+  /* No extra rules needed if you apply card-container class in HTML.
+     If not, uncomment the two lines below:
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  */
+  gap: 1.5rem;
 }
-
+.deck { /* each deck becomes a .card visually */
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.deck h3 { font-size: 1.2rem; color: var(--purple); margin-bottom: .75rem; }
 .deck button {
-    background: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-size: 1rem;
+  background: var(--bright-blue); color: var(--white);
+  border: none; padding: .6rem 1.1rem; border-radius: 2rem; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  font-size: .95rem; font-weight: 600;
 }
-
 .deck button:hover {
-    background: #388E3C;
+  background: #59bde3;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
 }
+.deck:hover { transform: translateY(-6px); box-shadow: 0 8px 18px rgba(0,0,0,0.15); }
 
-.deck:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* Modal */
+/* ------------------------------------------------------
+   Modal / Flashcard
+------------------------------------------------------ */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
 }
-
-.modal.hidden {
-    display: none;
-}
+.modal.hidden { display: none; }
 
 .modal-content {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    width: 90%;
-    max-width: 600px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 90%; max-width: 640px;
+  text-align: center; position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #333;
-    cursor: pointer;
+  position: absolute; top: 12px; right: 12px;
+  font-size: 1.6rem; color: var(--purple);
+  background: none; border: 0; cursor: pointer; line-height: 1;
 }
-
-.close-btn:hover {
-    color: #d32f2f;
-}
+.close-btn:hover { color: var(--bright-blue); }
 
 .flashcard {
-    border: 2px solid #4CAF50;
-    border-radius: 10px;
-    padding: 20px;
-    background: linear-gradient(145deg, #f8f9fa, #ffffff);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-    height: 200px;
+  border: 2px solid var(--bright-blue);
+  border-radius: 12px;
+  padding: 1rem;
+  background: linear-gradient(145deg, #ffffff, #f8fbff);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  cursor: pointer;
+  position: relative;
+  height: 220px;
+  display: grid; place-items: center;
 }
-
 .flashcard .card-content {
-    display: none;
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 1.6;
+  display: none;
+  font-size: 1.1rem;
+  color: var(--purple);
+  line-height: 1.6;
+  width: 100%;
+}
+.flashcard .front { display: block; }
+.flashcard.flipped .front { display: none; }
+.flashcard.flipped .back { display: block; }
+
+/* Controls reuse site buttons */
+.card-controls { display: flex; justify-content: center; gap: .75rem; margin-top: 1rem; }
+.card-controls .btn-outline {
+  border-color: var(--bright-blue);
+  color: var(--bright-blue);
+  background: rgba(115,197,232,0.08);
+}
+.card-controls .btn-outline:hover {
+  background: var(--bright-blue);
+  color: var(--white);
 }
 
-.flashcard .front {
-    display: block;
+/* ------------------------------------------------------
+   Footer (IDENTICAL to homepage)
+------------------------------------------------------ */
+.site-footer { background: var(--purple); color: var(--cream); padding: 2rem 1rem; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; align-items: center; }
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 900; }
+.footer-nav ul { list-style: none; display: flex; gap: 1rem; }
+.footer-nav a { color: var(--cream); transition: color .3s ease; }
+.footer-nav a:hover { color: var(--soft-blue); }
+.footer-actions .btn { border: 2px solid var(--cream); color: var(--cream); }
+.footer-actions .btn:hover { background: var(--cream); color: var(--purple); }
+
+/* ------------------------------------------------------
+   Responsive (same breakpoints/behavior)
+------------------------------------------------------ */
+@media (max-width: 900px) {
+  .hero-content { flex-direction: column; text-align: center; }
+  .hero-text h1 { font-size: 2.2rem; }
+  .nav-links {
+    display: none; flex-direction: column; background: var(--white); padding: 1rem;
+    position: absolute; right: 1rem; top: 60px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: flex; }
 }
-
-.flashcard.flipped .front {
-    display: none;
-}
-
-.flashcard.flipped .back {
-    display: block;
-}
-
-/* Card Controls */
-.card-controls {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.card-controls button {
-    background: #4CAF50;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 25px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.card-controls button:hover {
-    background: #388E3C;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    background: #2E7D32;
-
-    color: #fff;
-    padding: 15px 0;
-    width: 100%;
-    font-size: 0.9rem;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-    .deck-list {
-        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-    }
-}
-
-@media (max-width: 768px) {
-    .deck-list {
-        grid-template-columns: repeat(1, 1fr); /* 1 card per row */
-    }
+@media (max-width: 600px) {
+  .hero-text h1 { font-size: 1.8rem; }
+  .btn { padding: .6rem 1.2rem; }
 }
