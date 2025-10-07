@@ -10,6 +10,22 @@
   <!-- Optional: enable smooth anchor scrolling without editing your CSS file -->
   <style>
     html:focus-within { scroll-behavior: smooth; }
+    
+    /* Shift hero text and buttons to the right */
+    .hero-text {
+      padding-left: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-text {
+        padding-left: 1rem;
+      }
+    }
+    
+    /* Move event card buttons down slightly without changing card size */
+    .event-card .btn {
+      margin-top: 1rem;
+    }
   </style>
 </head>
 <body>
